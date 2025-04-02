@@ -7,55 +7,171 @@
   </head>
   <body>
     <script>
-      console.log("question 1 :- ");
-      let age = 20;
-      console.log("Original age", age);
-      age = 22;
-      console.log("Updated age", age);
+      // console.log("question 1 :- ");
+      // let age = 20;
+      // console.log("Original age", age);
+      // age = 22;
+      // console.log("Updated age", age);
 
-      console.log("question 2 :- ");
-      let num1 = 20;
-      let num2 = 5;
-      console.log("Product of num1 and num2", num1 * num2);
-      console.log("Difference between num1 and num2", num1 - num2);
+      // console.log("question 2 :- ");
+      // let num1 = 20;
+      // let num2 = 5;
+      // console.log("Product of num1 and num2", num1 * num2);
+      // console.log("Difference between num1 and num2", num1 - num2);
 
-      console.log("question 4 :- ");
-      const person = {
-        name: "Ramu",
-        age: 30,
+      // console.log("question 4 :- ");
+      // const person = {
+      //   name: "Ramu",
+      //   age: 30,
+      // };
+      // console.log("Original Person", person);
+      // person.age = 31;
+      // console.log("Updated Person", person);
+
+      // console.log("question 5 :- ");
+      // const colors = { primary: "red", secondary: "blue" };
+      // console.log("Original Person", colors);
+      // colors["tertiary"] = "green";
+      // colors["Secondary"] = "grey";
+      // console.log("Updated Person", colors);
+
+      // console.log("question 6 :- ");
+      // const numbers = [1, 2, 3, 4];
+      // numbers[2] = 99;
+      // console.log(numbers);
+
+      // console.log("question 7 :- ");
+      // let coordinates = { x: 10, y: 20 };
+      // console.log(coordinates);
+      // let newCoordinates = { x: 30, y: 40 };
+      // coordinates = newCoordinates;
+      // console.log(coordinates);
+
+      // console.log("question 8 :- ");
+      // let obj = { a: 1, b: 2 };
+      // const obj2 = { a: 3, b: 4 };
+      // obj = obj2;
+      // console.log(obj);
+      // console.log(obj2);
+
+      const isBirthday = true;
+      let age = 23;
+      if (isBirthday) {
+        age++;
+      }
+      console.log("Program 1:");
+      console.log(`Current Age: ${age}`);
+      console.log("\n");
+
+      console.log("Program 2:");
+      const passengerAge = 65;
+      const ticketPrice = 500;
+      if (passengerAge >= 65) {
+        const discountedPrice = ticketPrice - ticketPrice * 0.15;
+        console.log(`Ticket price for age greater than 60: ${discountedPrice}`);
+      } else {
+        console.log(
+          `Ticket price for age less than or equal to 60: ${ticketPrice}`
+        );
+      }
+      console.log("\n");
+
+      console.log("Program 3:");
+      const num1 = 1;
+      const num2 = 2;
+      const num3 = 3;
+      if (num1 > num2 && num1 > num3) {
+        console.log("num1 is greater.");
+      } else if (num2 > num3 && num2 > num1) {
+        console.log("num2 is greater.");
+      } else {
+        console.log("num3 is greater.");
+      }
+      console.log("\n");
+
+      console.log("calculateBonus");
+      const calculateBonus = (workedHours, marks, salary) => {
+        let bonus = 0;
+        if (workedHours > 25 && marks > 85) {
+          bonus = salary + salary * 0.1;
+        } else if (workedHours > 15 && marks > 75) {
+          bonus = salary + salary * 0.05;
+        } else {
+          bonus = 0;
+        }
+        return bonus;
       };
-      console.log("Original Person", person);
-      person.age = 31;
-      console.log("Updated Person", person);
+      console.log(calculateBonus(20, 80, 5000));
+      const array = [5, 12, 7, 25, 18, 3];
 
-      console.log("question 5 :- ");
-      const colors = { primary: "red", secondary: "blue" };
-      console.log("Original Person", colors);
-      colors["tertiary"] = "green";
-      colors["Secondary"] = "grey";
-      console.log("Updated Person", colors);
+console.log("program 1");
+const print = () => {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
+};
+print();
 
-      console.log("question 6 :- ");
-      const numbers = [1, 2, 3, 4];
-      numbers[2] = 99;
-      console.log(numbers);
+console.log("program 2");
+const addTenEach = () => {
+  let newArr = [];
+  for (let i = 0; i < array.length; i++) {
+    newArr.push(array[i] + 10);
+  }
+  return newArr;
+};
+console.log(addTenEach());
 
-      console.log("question 7 :- ");
-      let coordinates = { x: 10, y: 20 };
-      console.log(coordinates);
-      let newCoordinates = { x: 30, y: 40 };
-      coordinates = newCoordinates;
-      console.log(coordinates);
+console.log("program 3");
+const convertAllToEven = () => {
+  let newArr = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      newArr.push(array[i]);
+    } else {
+      newArr.push(array[i] + 1);
+    }
+  }
+  return newArr;
+};
+console.log(convertAllToEven());
 
-      console.log("question 8 :- ");
-      let obj = { a: 1, b: 2 };
-      const obj2 = { a: 3, b: 4 };
-      obj = obj2;
-      console.log(obj);
-      console.log(obj2);
+console.log("program 4");
+const numDivisibleByTwo = () => {
+  let newArr = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      newArr.push(array[i]);
+    }
+  }
+  return newArr;
+};
+console.log(numDivisibleByTwo());
 
-      console.log("question 9 :- ");
-      console.log("question 10 :- ");
+console.log("program 5");
+const sumOfAll = () => {
+  let total = 0;
+  for (let i = 0; i < array.length; i++) {
+    total = total + array[i];
+  }
+  return total;
+};
+console.log(sumOfAll());
+
+console.log("program 6");
+const sumOfOddAndEven = () => {
+  let sumOfOdd = 0;
+  let sumOfEven = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      sumOfEven = sumOfEven + array[i];
+    } else {
+      sumOfOdd = sumOfOdd + array[i];
+    }
+  }
+  return { sumOfEven, sumOfOdd };
+};
+console.log(sumOfOddAndEven());
     </script>
   </body>
 </html>
