@@ -173,80 +173,153 @@
       // };
       // console.log(sumOfOddAndEven());
 
-      console.log("program 1");
-      const car = {
-        brand: "Honda",
-        model: "Corolla",
-      };
-      console.log(car.brand);
-      console.log(car.model);
+      // console.log("program 1");
+      // const car = {
+      //   brand: "Honda",
+      //   model: "Corolla",
+      // };
+      // console.log(car.brand);
+      // console.log(car.model);
 
-      car.brand = "Toyota";
+      // car.brand = "Toyota";
 
-      console.log(car);
-      car["year"] = 2022;
-      car["color"] = "blue";
-      console.log(car);
-      const printVal = () => {
-        for (val in car) {
-          console.log(val, ":", car[val]);
+      // console.log(car);
+      // car["year"] = 2022;
+      // car["color"] = "blue";
+      // console.log(car);
+      // const printVal = () => {
+      //   for (val in car) {
+      //     console.log(val, ":", car[val]);
+      //   }
+      // };
+      // printVal();
+
+      // console.log("\n");
+      // console.log("program 2");
+      // const citizen = {
+      //   name: "ramu",
+      //   age: 29,
+      //   occupation: "Doctor",
+      // };
+      // citizen.age = 68;
+      // citizen.age = citizen.age + 2;
+      // citizen["city"] = "Delhi";
+      // for (value in citizen) {
+      //   console.log(value, ":", citizen[value]);
+      // }
+      // console.log("\n");
+
+      // console.log("Program 3");
+      // const students = [
+      //   { name: "Rahul", rollNo: 101, hindi: 80, english: 75, maths: 90 },
+      //   { name: "Amit", rollNo: 102, hindi: 85, english: 70, maths: 95 },
+      //   { name: "Priya", rollNo: 103, hindi: 78, english: 92, maths: 87 },
+      // ];
+
+      // for (let i = 0; i < students.length; i++) {
+      //   const marksForComputer = [88, 92, 95];
+      //   students[i]["computer"] = marksForComputer[i];
+      // }
+
+      // for (let i = 0; i < students.length; i++) {
+      //   const marksForScience = [82, 90, 88];
+      //   students[i]["science"] = marksForScience[i];
+      // }
+      // console.log("students", students);
+
+      // const newStudent = {
+      //   name: "Kaveri",
+      //   rollNo: 104,
+      //   hindi: 84,
+      //   english: 88,
+      //   maths: 78,
+      //   computer: 90,
+      //   science: 86,
+      // };
+      // students.push(newStudent);
+
+      // const updatedStudentdata = () => {
+      //   for (let i = 0; i < students.length; i++) {
+      //     for (val in students[i]) {
+      //       console.log(val, ":", students[i][val]);
+      //     }
+      //   }
+      // };
+
+      // console.log("updated Student data:", updatedStudentdata());
+
+      const checkNum = (num) => num % 2 === 0;
+      console.log(checkNum(3));
+      const convert = (str) => str.toUpperCase();
+      console.log(convert("raj"));
+
+      const joinName = (firstName, lastName) => ({ firstName, lastName });
+      console.log(joinName("raja", "akash"));
+
+      const objectReturn = (str1, str2) => ({
+        concatenation: str1 + " " + str2,
+        totalLength: (str1 + str2).length,
+      });
+      console.log(objectReturn("Raj", "kumar"));
+
+      const calculateAverage = (arr) => {
+        let average = 0;
+        let total = 0;
+        for (let i = 0; i < arr.length; i++) {
+          total = total + arr[i];
         }
+        return (average = total / arr.length);
       };
-      printVal();
+      console.log(calculateAverage([5, 10, 15]));
 
-      console.log("\n");
-      console.log("program 2");
-      const citizen = {
-        name: "ramu",
-        age: 29,
-        occupation: "Doctor",
+      const reverseString = (str) => {
+        let reverseStr = "";
+        for (i = str.length - 1; i > -1; i--) {
+          reverseStr = reverseStr + str[i];
+        }
+        return reverseStr;
       };
-      citizen.age = 68;
-      citizen.age = citizen.age + 2;
-      citizen["city"] = "Delhi";
-      for (value in citizen) {
-        console.log(value, ":", citizen[value]);
-      }
-      console.log("\n");
+      console.log(reverseString("World"));
 
-      console.log("Program 3");
       const students = [
-        { name: "Rahul", rollNo: 101, hindi: 80, english: 75, maths: 90 },
-        { name: "Amit", rollNo: 102, hindi: 85, english: 70, maths: 95 },
-        { name: "Priya", rollNo: 103, hindi: 78, english: 92, maths: 87 },
+        { name: "Alice", age: 20, grade: 85 },
+        { name: "Bob", age: 22, grade: 92 },
+        { name: "Charlie", age: 19, grade: 88 },
       ];
 
-      for (let i = 0; i < students.length; i++) {
-        const marksForComputer = [88, 92, 95];
-        students[i]["computer"] = marksForComputer[i];
-      }
-
-      for (let i = 0; i < students.length; i++) {
-        const marksForScience = [82, 90, 88];
-        students[i]["science"] = marksForScience[i];
-      }
-      console.log("students", students);
-
-      const newStudent = {
-        name: "Kaveri",
-        rollNo: 104,
-        hindi: 84,
-        english: 88,
-        maths: 78,
-        computer: 90,
-        science: 86,
+      const calculateAverageGrade = (arr) => {
+        let totalGrade = 0;
+        for (let i = 0; i < arr.length; i++) {
+          totalGrade = totalGrade + arr[i].grade;
+        }
+        return (totalGrade / arr.length).toFixed(2);
       };
-      students.push(newStudent);
+      console.log(calculateAverageGrade(students));
 
-      const updatedStudentdata = () => {
-        for (let i = 0; i < students.length; i++) {
-          for (val in students[i]) {
-            console.log(val, ":", students[i][val]);
+      const getNames = (arr) => {
+        let newArr = [];
+        for (let i = 0; i < arr.length; i++) {
+          newArr.push(arr[i].name);
+        }
+        return newArr;
+      };
+      console.log(getNames(students));
+
+      const isAnyBelow18 = (arr) => {
+        let newArr = [];
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i].age < 18) {
+            newArr.push(arr[i].name);
           }
         }
+        if (newArr.length === 0) {
+          return false;
+        } else {
+          return newArr;
+        }
       };
-
-      console.log("updated Student data:", updatedStudentdata());
+      console.log(isAnyBelow18(students));
+      // console.log(reverseString());
     </script>
   </body>
 </html>
