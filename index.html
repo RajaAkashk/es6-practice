@@ -21,12 +21,42 @@
     <div>
       <label for="sentense">Enter a sentense:</label>
       <input type="text" id="sentense" />
-      <button type="button" id="generateSentenseBtn">Generate table</button>
+      <button type="button" id="generateSentenseBtn">Generate sentense</button>
       <ul id="printNumbers3"></ul>
     </div>
+    <h4>Numbers</h4>
     <ul id="result2"></ul>
+    <h4>Fruits & Vegetables</h4>
+    <ul id="result3"></ul>
+
+    <div>
+      <button id="increment1">Increment 1</button>
+      <button id="increment2">Increment 2</button>
+      <p>Count 1: <span id="count1">0</span></p>
+      <p>Count 2: <span id="count2">0</span></p>
+      <p>Total Count: <span id="total">0</span></p>
+    </div>
 
     <script>
+      const increment1 = document.querySelector("#increment1");
+      const increment2 = document.querySelector("#increment2");
+      const total = document.querySelector("#total");
+      const count1Container = document.querySelector("#count1");
+      const count2Container = document.querySelector("#count2");
+      let count1 = 0;
+      let count2 = 0;
+
+      increment1.addEventListener("click", () => {
+        count1++;
+        count1Container.textContent = count1;
+        total.textContent = count1 + count2;
+      });
+      increment2.addEventListener("click", () => {
+        count2++;
+        count2Container.textContent = count2;
+        total.textContent = count1 + count2;
+      });
+
       const printNumbers = () => {
         let results = [];
         for (let i = 1; i < 21; i++) {
@@ -124,6 +154,34 @@
         }
       };
       printNumbersArray();
+
+      const strings = [
+        "apple",
+        "drumstick",
+        "orange",
+        "sweet potato",
+        "kiwi",
+        "cauliflower",
+        "grape",
+        "pear",
+        "bottle gourd",
+        "snake gourd",
+      ];
+
+      const printFruitsAndVegetable = () => {
+        const result3 = document.querySelector("#result3");
+
+        strings.forEach((string) => {
+          const li = document.createElement("li");
+          if (string.length <= 6) {
+            li.textContent = `${string} - Fruit`;
+          } else {
+            li.textContent = `${string} - Vegetable`;
+          }
+          result3.appendChild(li);
+        });
+      };
+      printFruitsAndVegetable();
       // console.log(reverseString());
     </script>
   </body>
