@@ -34,10 +34,50 @@
       <button id="increment2">Increment 2</button>
       <p>Count 1: <span id="count1">0</span></p>
       <p>Count 2: <span id="count2">0</span></p>
-      <p>Total Count: <span id="total">0</span></p>
+      <p id="total"></p>
+    </div>
+
+    <form id="taskForm">
+      <input type="text" id="task" />
+      <select id="selectDay">
+        <option value="monday">Monday</option>
+        <option value="tuesday">Tuesday</option>
+        <option value="saturday">Saturday</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+    <div>
+      <div>
+        <h4>Week days</h4>
+        <ul id="weekDays"></ul>
+      </div>
+      <div>
+        <h4>Weekend days</h4>
+        <ul id="weekEndDays"></ul>
+      </div>
     </div>
 
     <script>
+      const taskForm = document.querySelector("#taskForm");
+
+      taskForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const weekDays = document.querySelector("#weekDays");
+        const weekEndDays = document.querySelector("#weekEndDays");
+
+        const task = document.querySelector("#task").value;
+        const selectDay = document.querySelector("#selectDay").value;
+        console.log(task, selectDay);
+        const li = document.createElement("li");
+        if (selectDay === "saturday" || selectDay === "sunday") {
+          li.textContent = task;
+          weekEndDays.appendChild(li);
+        } else {
+          li.textContent = task;
+          weekDays.appendChild(li);
+        }
+      });
+
       const increment1 = document.querySelector("#increment1");
       const increment2 = document.querySelector("#increment2");
       const total = document.querySelector("#total");
@@ -49,13 +89,27 @@
       increment1.addEventListener("click", () => {
         count1++;
         count1Container.textContent = count1;
-        total.textContent = count1 + count2;
+        comapare();
       });
       increment2.addEventListener("click", () => {
         count2++;
         count2Container.textContent = count2;
-        total.textContent = count1 + count2;
+        comapare();
       });
+
+      const comapare = () => {
+        if (count1 > count2) {
+          total.textContent = `count 1 is greater than count 2 by ${
+            count1 - count2
+          }`;
+        } else if (count2 > count1) {
+          total.textContent = `count 2 is greater than count 1 by ${
+            count2 - count1
+          }`;
+        } else {
+          total.textContent = `count 1 is equal to count 2`;
+        }
+      };
 
       const printNumbers = () => {
         let results = [];
