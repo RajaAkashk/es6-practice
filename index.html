@@ -58,22 +58,35 @@
     </div>
 
     <script>
+
+
       const taskForm = document.querySelector("#taskForm");
 
       taskForm.addEventListener("submit", (e) => {
         e.preventDefault();
+
         const weekDays = document.querySelector("#weekDays");
         const weekEndDays = document.querySelector("#weekEndDays");
 
         const task = document.querySelector("#task").value;
         const selectDay = document.querySelector("#selectDay").value;
-        console.log(task, selectDay);
+
         const li = document.createElement("li");
+        li.textContent = task;
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.style.marginLeft = "10px";
+
+        deleteBtn.addEventListener("click", () => {
+          li.remove();
+        });
+
+        li.appendChild(deleteBtn);
+
         if (selectDay === "saturday" || selectDay === "sunday") {
-          li.textContent = task;
           weekEndDays.appendChild(li);
         } else {
-          li.textContent = task;
           weekDays.appendChild(li);
         }
       });
