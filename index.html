@@ -388,141 +388,180 @@
       // };
       // obj.print();
 
-      const arr = [10, 20, 30];
-      const [a, , b] = arr;
-      console.log(a, b);
-      // 10 20
+      // const arr = [10, 20, 30];
+      // const [a, , b] = arr;
+      // console.log(a, b);
+      // // 10 20
 
-      const person = {
-        name: "Raja",
-        age: 21,
-      };
+      // const person = {
+      //   name: "Raja",
+      //   age: 21,
+      // };
 
-      const updated = { ...person, age: 22 };
-      console.log(updated.age);
-      //22
+      // const updated = { ...person, age: 22 };
+      // console.log(updated.age);
+      // //22
 
-      function sum(...nums) {
-        return nums.reduce((acc, cur) => acc + cur, 0);
+      // function sum(...nums) {
+      //   return nums.reduce((acc, cur) => acc + cur, 0);
+      // }
+
+      // sum(5, 10, 15);
+      // //30
+
+      // const user = {
+      //   name: "Akash",
+      //   greet() {
+      //     return `Hello, ${this.name}`;
+      //   },
+      // };
+
+      // const greetFn = user.greet;
+      // console.log(greetFn());
+      // //Error
+
+      // const nums = [1, 2, 3];
+      // const doubled = nums.map((n) => n * 2);
+      // console.log(doubled);
+      // //2,4,6
+
+      // const data = {
+      //   items: ["pen", "book"],
+      //   printItems() {
+      //     this.items.forEach(function (item) {
+      //       console.log(this, item);
+      //     });
+      //   },
+      // };
+
+      // data.printItems();
+      // //Error
+
+      // function multiplyBy(n) {
+      //   return function (x) {
+      //     return x * n;
+      //   };
+      // }
+
+      // const double = multiplyBy(2);
+      // console.log(double(5));
+
+      // (function (num) {
+      //   console.log(num * 2);
+      // })(4);
+      // //8
+
+      // var x = 5;
+
+      // function test() {
+      //   var x = 10;
+      //   console.log(x);
+      // }
+      // test();
+      // console.log(x);
+      // // 10 5
+
+      // {
+      //   let x = 10;
+      // }
+      // console.log(x);
+      // //error
+
+      // function outer() {
+      //   let count = 0;
+      //   return function () {
+      //     count++;
+      //     return count;
+      //   };
+      // }
+
+      // const counter = outer();
+      // console.log(counter());
+      // console.log(counter());
+      // // 1 2
+
+      // const obj = {
+      //   name: "Raja",
+      //   show: function () {
+      //     console.log(this.name);
+      //   },
+      // };
+      // obj.show();
+      // //Raja
+
+      // const person2 = {
+      //   age: 25,
+      //   getAge: () => {
+      //     console.log(this.age);
+      //   },
+      // };
+      // person2.getAge();
+      // // error
+
+      // const user2 = {
+      //   name: "Akash",
+      //   greet() {
+      //     setTimeout(() => {
+      //       console.log("Hello " + this.name);
+      //     }, 1000);
+      //   },
+      // };
+      // user2.greet();
+
+      // const createCounter = (step) => {
+      //   let count = 0;
+      //   return function () {
+      //     count += step;
+      //     console.log(count);
+      //   };
+      // };
+
+      // const counter2 = createCounter(5);
+      // counter2();
+      // counter2();
+      // counter2();
+      console.log(this);
+
+      function show() {
+        console.log(this);
       }
+      show();
 
-      sum(5, 10, 15);
-      //30
+      function person(name) {
+        this.name = name;
+      }
 
       const user = {
         name: "Akash",
-        greet() {
-          return `Hello, ${this.name}`;
-        },
-      };
-
-      const greetFn = user.greet;
-      console.log(greetFn());
-      //Error
-
-      const nums = [1, 2, 3];
-      const doubled = nums.map((n) => n * 2);
-      console.log(doubled);
-      //2,4,6
-
-      const data = {
-        items: ["pen", "book"],
-        printItems() {
-          this.items.forEach(function (item) {
-            console.log(this, item);
-          });
-        },
-      };
-
-      data.printItems();
-      //Error
-
-      function multiplyBy(n) {
-        return function (x) {
-          return x * n;
-        };
-      }
-
-      const double = multiplyBy(2);
-      console.log(double(5));
-
-      (function (num) {
-        console.log(num * 2);
-      })(4);
-      //8
-
-      var x = 5;
-
-      function test() {
-        var x = 10;
-        console.log(x);
-      }
-      test();
-      console.log(x);
-      // 10 5
-
-      {
-        let x = 10;
-      }
-      console.log(x);
-      //error
-
-      function outer() {
-        let count = 0;
-        return function () {
-          count++;
-          return count;
-        };
-      }
-
-      const counter = outer();
-      console.log(counter());
-      console.log(counter());
-      // 1 2
-
-      const obj = {
-        name: "Raja",
-        show: function () {
+        greet: () => {
           console.log(this.name);
         },
       };
-      obj.show();
-      //Raja
+      user.greet();
 
-      const person2 = {
-        age: 25,
-        getAge: () => {
-          console.log(this.age);
-        },
-      };
-      person2.getAge();
-      // error
+      const p1 = new person("Akash");
+      console.log(p1.name);
 
-      const user2 = {
-        name: "Akash",
+      function Person(name, age) {
+        this.sname = name;
+        this.age = age;
+      }
+
+      const person3 = new Person("Raj", 23);
+      console.log("person 3", person3);
+
+      class Personal {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+
         greet() {
-          setTimeout(() => {
-            console.log("Hello " + this.name);
-          }, 1000);
-        },
-      };
-      user2.greet();
-
-      const createCounter = (step) => {
-        let count = 0;
-        return function () {
-          count += step;
-          console.log(count);
-        };
-      };
-
-      const counter2 = createCounter(5);
-      counter2();
-      counter2();
-      counter2();
-
-
-      
+          console.log(`hello, this is ${this.name}`);
+        }
+      }
+      const p4 = new Personal("Shruti", 23);
+      console.log("p4", p4);
     </script>
   </body>
 </html>
