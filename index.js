@@ -454,83 +454,83 @@ console.log(obj2);
 //   }
 // });
 
-// const taskForm = document.querySelector("#taskForm");
+const taskForm = document.querySelector("#taskForm");
 
-// taskForm.addEventListener("submit", (e) => {
-//   e.preventDefault();
+taskForm.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-//   const weekDays = document.querySelector("#weekDays");
-//   const weekEndDays = document.querySelector("#weekEndDays");
+  const weekDays = document.querySelector("#weekDays");
+  const weekEndDays = document.querySelector("#weekEndDays");
 
-//   const task = document.querySelector("#task").value;
-//   const selectDay = document.querySelector("#selectDay").value;
+  const task = document.querySelector("#task").value;
+  const selectDay = document.querySelector("#selectDay").value;
 
-//   const li = document.createElement("li");
-//   li.textContent = task;
+  const li = document.createElement("li");
+  li.textContent = task;
 
-//   const deleteBtn = document.createElement("button");
-//   deleteBtn.textContent = "Delete";
-//   deleteBtn.style.marginLeft = "10px";
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+  deleteBtn.style.marginLeft = "10px";
 
-//   deleteBtn.addEventListener("click", () => {
-//     li.remove();
-//   });
+  deleteBtn.addEventListener("click", () => {
+    li.remove();
+  });
 
-//   li.appendChild(deleteBtn);
+  li.appendChild(deleteBtn);
 
-//   if (selectDay === "saturday" || selectDay === "sunday") {
-//     weekEndDays.appendChild(li);
-//   } else {
-//     weekDays.appendChild(li);
-//   }
-// });
+  if (selectDay === "saturday" || selectDay === "sunday") {
+    weekEndDays.appendChild(li);
+  } else {
+    weekDays.appendChild(li);
+  }
+});
 
-// const increment1 = document.querySelector("#increment1");
-// const increment2 = document.querySelector("#increment2");
-// const total = document.querySelector("#total");
-// const count1Container = document.querySelector("#count1");
-// const count2Container = document.querySelector("#count2");
-// let count1 = 0;
-// let count2 = 0;
+const increment1 = document.querySelector("#increment1");
+const increment2 = document.querySelector("#increment2");
+const total = document.querySelector("#total");
+const count1Container = document.querySelector("#count1");
+const count2Container = document.querySelector("#count2");
+let count1 = 0;
+let count2 = 0;
 
-// increment1.addEventListener("click", () => {
-//   count1++;
-//   count1Container.textContent = count1;
-//   comapare();
-// });
-// increment2.addEventListener("click", () => {
-//   count2++;
-//   count2Container.textContent = count2;
-//   comapare();
-// });
+increment1.addEventListener("click", () => {
+  count1++;
+  count1Container.textContent = count1;
+  comapare();
+});
+increment2.addEventListener("click", () => {
+  count2++;
+  count2Container.textContent = count2;
+  comapare();
+});
 
-// const comapare = () => {
-//   if (count1 > count2) {
-//     total.textContent = `count 1 is greater than count 2 by ${
-//       count1 - count2
-//     }`;
-//   } else if (count2 > count1) {
-//     total.textContent = `count 2 is greater than count 1 by ${
-//       count2 - count1
-//     }`;
-//   } else {
-//     total.textContent = `count 1 is equal to count 2`;
-//   }
-// };
+const comapare = () => {
+  if (count1 > count2) {
+    total.textContent = `count 1 is greater than count 2 by ${
+      count1 - count2
+    }`;
+  } else if (count2 > count1) {
+    total.textContent = `count 2 is greater than count 1 by ${
+      count2 - count1
+    }`;
+  } else {
+    total.textContent = `count 1 is equal to count 2`;
+  }
+};
 
-// const printNumbers = () => {
-//   let results = [];
-//   for (let i = 1; i < 21; i++) {
-//     if (i % 3 === 0 && i % 5 === 0) {
-//       results.push("FizzBuzz");
-//     } else if (i % 5 === 0) {
-//       results.push("Buzz");
-//     } else if (i % 3 === 0) {
-//       results.push("Fizz");
-//     } else {
-//       results.push(i);
-//     }
-//   }
+const printNumbers = () => {
+  let results = [];
+  for (let i = 1; i < 21; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      results.push("FizzBuzz");
+    } else if (i % 5 === 0) {
+      results.push("Buzz");
+    } else if (i % 3 === 0) {
+      results.push("Fizz");
+    } else {
+      results.push(i);
+    }
+  }
 
 //   const printNumbers = document.getElementById("printNumbers");
 //   results.forEach((item) => {
@@ -541,32 +541,32 @@ console.log(obj2);
 // };
 // printNumbers();
 
-// const generateNumbers = () => {
-//   const results = [];
-//   for (let i = 1; i < 21; i++) {
-//     if (i % 2 !== 0) {
-//       results.push(`Odd: ${i * i}`);
-//     } else {
-//       results.push(`Even: ${i * i}`);
-//     }
-//   }
-//   console.log(results);
-// };
-// generateNumbers();
+const generateNumbers = () => {
+  const results = [];
+  for (let i = 1; i < 21; i++) {
+    if (i % 2 !== 0) {
+      results.push(`Odd: ${i * i}`);
+    } else {
+      results.push(`Even: ${i * i}`);
+    }
+  }
+  console.log(results);
+};
+generateNumbers();
 
-// const generateBtn = document.querySelector("#generateBtn");
+const generateBtn = document.querySelector("#generateBtn");
 
-// const generateMultiples = () => {
-//   const number = document.querySelector("#number").value;
-//   const printNumbers2 = document.querySelector("#printNumbers2");
-//   printNumbers2.innerHTML = "";
-//   for (let i = 1; i < 11; i++) {
-//     const li = document.createElement("li");
-//     li.textContent = `${number} * ${i} = ${number * i}`;
-//     printNumbers2.appendChild(li);
-//   }
-// };
-// generateBtn.addEventListener("click", generateMultiples);
+const generateMultiples = () => {
+  const number = document.querySelector("#number").value;
+  const printNumbers2 = document.querySelector("#printNumbers2");
+  printNumbers2.innerHTML = "";
+  for (let i = 1; i < 11; i++) {
+    const li = document.createElement("li");
+    li.textContent = `${number} * ${i} = ${number * i}`;
+    printNumbers2.appendChild(li);
+  }
+};
+generateBtn.addEventListener("click", generateMultiples);
 
 // const generateSentenseBtn = document.querySelector(
 //   "#generateSentenseBtn"
