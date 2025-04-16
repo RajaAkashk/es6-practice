@@ -369,12 +369,137 @@
 
       console.log(users2.map((user) => user.role));
 
-      const name = "raj";
-      {
-        const name = "akash";
-        console.log(name);
+      // const name = "raj";
+      // {
+      //   const name = "akash";
+      //   console.log(name);
+      // }
+      // console.log(name);
+
+      console.log(name2);
+      var name2 = "raj";
+
+      printName();
+      function printName() {
+        console.log("raj");
       }
-      console.log(name);
+
+      const printName2 = () => console.log("Akash");
+      printName2();
+
+      const obj1 = {
+        name: "raj kumar",
+        callTeacher: function () {
+          console.log(this.name);
+        },
+      };
+
+      obj1.callTeacher();
+
+      const user = {
+        name: "Emma",
+        greet() {
+          console.log(`Hello, ${this.name}`);
+        },
+      };
+
+      const greetUser2 = user.greet;
+      greetUser2();
+
+      const person = {
+        name: "James",
+        logInfo: function () {
+          setTimeout(() => {
+            console.log(`${this.name}`);
+          }, 1000);
+        },
+      };
+
+      person.logInfo();
+
+      const greeting = function () {
+        console.log(`Hello, ${this.name}`);
+      };
+
+      const user1 = { name: "John" };
+      const user2 = { name: "Jane" };
+
+      greeting.call(user1);
+      greeting.call(user2);
+
+      function displayInfo(age) {
+        console.log(`${this.name} is ${age} years old.`);
+      }
+
+      const obj2 = { name: "Lucas" };
+      const obj3 = { name: "Anna" };
+
+      displayInfo.apply(obj2, [25]);
+      displayInfo.apply(obj3, [30]);
+
+      function show() {
+        console.log(this);
+      }
+
+      show();
+
+      const obj = {
+        count: 0,
+        increment: function () {
+          setInterval(() => {
+            this.count++;
+            console.log(this.count);
+          }, 1000);
+        },
+      };
+
+      // obj.increment();
+
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.greet = function () {
+          console.log(`Hello, ${this.name}`);
+        };
+      }
+
+      const person1 = new Person("John", 30);
+      person1.greet();
+
+      let promise1 = new Promise((resolve) => {
+        setTimeout(() => resolve("First"), 5000);
+      });
+      let promise2 = new Promise((resolve) =>
+        setTimeout(resolve, 2000, "Second got Error")
+      );
+      let promise3 = new Promise((resolve) =>
+        setTimeout(resolve, 3000, "Third")
+      );
+
+      Promise.all([promise1, promise2, promise3])
+        .then((result) => console.log(result))
+        .catch((error) => console.error(error));
+
+      Promise.allSettled([promise1, promise2, promise3]).then((results) => {
+        console.log(results);
+      });
+
+      let promise4 = new Promise((resolve) =>
+        setTimeout(resolve, 1000, "First")
+      );
+      let promise5 = new Promise((resolve) =>
+        setTimeout(resolve, 2000, "Second")
+      );
+
+      Promise.race([promise4, promise5]).then((result) => {
+        console.log("race result: ", result);
+      });
+
+      const obj5 = { name: "Raj" };
+      const obj6 = { ...obj5 };
+      obj6.age = 23;
+      console.log("Object ", obj5);
+      console.log("Object ", obj6);
     </script>
   </body>
 </html>
