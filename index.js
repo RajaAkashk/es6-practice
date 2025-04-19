@@ -1,97 +1,97 @@
-console.log("question 1 :- ");
-let age = 20;
-console.log("Original age", age);
-age = 22;
-console.log("Updated age", age);
+// console.log("question 1 :- ");
+// let age = 20;
+// console.log("Original age", age);
+// age = 22;
+// console.log("Updated age", age);
 
-console.log("question 2 :- ");
-let num1 = 20;
-let num2 = 5;
-console.log("Product of num1 and num2", num1 * num2);
-console.log("Difference between num1 and num2", num1 - num2);
+// console.log("question 2 :- ");
+// let num1 = 20;
+// let num2 = 5;
+// console.log("Product of num1 and num2", num1 * num2);
+// console.log("Difference between num1 and num2", num1 - num2);
 
-console.log("question 4 :- ");
-const person = {
-  name: "Ramu",
-  age: 30,
-};
-console.log("Original Person", person);
-person.age = 31;
-console.log("Updated Person", person);
-
-console.log("question 5 :- ");
-const colors = { primary: "red", secondary: "blue" };
-console.log("Original Person", colors);
-colors["tertiary"] = "green";
-colors["Secondary"] = "grey";
-console.log("Updated Person", colors);
-
-console.log("question 6 :- ");
-const numbers = [1, 2, 3, 4];
-numbers[2] = 99;
-console.log(numbers);
-
-console.log("question 7 :- ");
-let coordinates = { x: 10, y: 20 };
-console.log(coordinates);
-let newCoordinates = { x: 30, y: 40 };
-coordinates = newCoordinates;
-console.log(coordinates);
-
-console.log("question 8 :- ");
-let obj = { a: 1, b: 2 };
-const obj2 = { a: 3, b: 4 };
-obj = obj2;
-console.log(obj);
-console.log(obj2);
-
-// const isBirthday = true;
-// let age = 23;
-// if (isBirthday) {
-//   age++;
-// }
-// console.log("Program 1:");
-// console.log(`Current Age: ${age}`);
-// console.log("\n");
-
-// console.log("Program 2:");
-// const passengerAge = 65;
-// const ticketPrice = 500;
-// if (passengerAge >= 65) {
-//   const discountedPrice = ticketPrice - ticketPrice * 0.15;
-//   console.log(`Ticket price for age greater than 60: ${discountedPrice}`);
-// } else {
-//   console.log(`Ticket price for age less than or equal to 60: ${ticketPrice}`);
-// }
-// console.log("\n");
-
-// console.log("Program 3:");
-// const num1 = 1;
-// const num2 = 2;
-// const num3 = 3;
-// if (num1 > num2 && num1 > num3) {
-//   console.log("num1 is greater.");
-// } else if (num2 > num3 && num2 > num1) {
-//   console.log("num2 is greater.");
-// } else {
-//   console.log("num3 is greater.");
-// }
-// console.log("\n");
-
-// console.log("calculateBonus");
-// const calculateBonus = (workedHours, marks, salary) => {
-//   let bonus = 0;
-//   if (workedHours > 25 && marks > 85) {
-//     bonus = salary + salary * 0.1;
-//   } else if (workedHours > 15 && marks > 75) {
-//     bonus = salary + salary * 0.05;
-//   } else {
-//     bonus = 0;
-//   }
-//   return bonus;
+// console.log("question 4 :- ");
+// const person = {
+//   name: "Ramu",
+//   age: 30,
 // };
-// console.log(calculateBonus(20, 80, 5000));
-// const array = [5, 12, 7, 25, 18, 3];
+// console.log("Original Person", person);
+// person.age = 31;
+// console.log("Updated Person", person);
+
+// console.log("question 5 :- ");
+// const colors = { primary: "red", secondary: "blue" };
+// console.log("Original Person", colors);
+// colors["tertiary"] = "green";
+// colors["Secondary"] = "grey";
+// console.log("Updated Person", colors);
+
+// console.log("question 6 :- ");
+// const numbers = [1, 2, 3, 4];
+// numbers[2] = 99;
+// console.log(numbers);
+
+// console.log("question 7 :- ");
+// let coordinates = { x: 10, y: 20 };
+// console.log(coordinates);
+// let newCoordinates = { x: 30, y: 40 };
+// coordinates = newCoordinates;
+// console.log(coordinates);
+
+// console.log("question 8 :- ");
+// let obj = { a: 1, b: 2 };
+// const obj2 = { a: 3, b: 4 };
+// obj = obj2;
+// console.log(obj);
+// console.log(obj2);
+
+const isBirthday = true;
+let age = 23;
+if (isBirthday) {
+  age++;
+}
+console.log("Program 1:");
+console.log(`Current Age: ${age}`);
+console.log("\n");
+
+console.log("Program 2:");
+const passengerAge = 65;
+const ticketPrice = 500;
+if (passengerAge >= 65) {
+  const discountedPrice = ticketPrice - ticketPrice * 0.15;
+  console.log(`Ticket price for age greater than 60: ${discountedPrice}`);
+} else {
+  console.log(`Ticket price for age less than or equal to 60: ${ticketPrice}`);
+}
+console.log("\n");
+
+console.log("Program 3:");
+const num1 = 1;
+const num2 = 2;
+const num3 = 3;
+if (num1 > num2 && num1 > num3) {
+  console.log("num1 is greater.");
+} else if (num2 > num3 && num2 > num1) {
+  console.log("num2 is greater.");
+} else {
+  console.log("num3 is greater.");
+}
+console.log("\n");
+
+console.log("calculateBonus");
+const calculateBonus = (workedHours, marks, salary) => {
+  let bonus = 0;
+  if (workedHours > 25 && marks > 85) {
+    bonus = salary + salary * 0.1;
+  } else if (workedHours > 15 && marks > 75) {
+    bonus = salary + salary * 0.05;
+  } else {
+    bonus = 0;
+  }
+  return bonus;
+};
+console.log(calculateBonus(20, 80, 5000));
+const array = [5, 12, 7, 25, 18, 3];
 
 // console.log("program 1");
 // const print = () => {
@@ -111,139 +111,139 @@ console.log(obj2);
 // };
 // console.log(addTenEach());
 
-// console.log("program 3");
-// const convertAllToEven = () => {
-//   let newArr = [];
-//   for (let i = 0; i < array.length; i++) {
-//     if (array[i] % 2 === 0) {
-//       newArr.push(array[i]);
-//     } else {
-//       newArr.push(array[i] + 1);
-//     }
-//   }
-//   return newArr;
-// };
-// console.log(convertAllToEven());
+console.log("program 3");
+const convertAllToEven = () => {
+  let newArr = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      newArr.push(array[i]);
+    } else {
+      newArr.push(array[i] + 1);
+    }
+  }
+  return newArr;
+};
+console.log(convertAllToEven());
 
-// console.log("program 4");
-// const numDivisibleByTwo = () => {
-//   let newArr = [];
-//   for (let i = 0; i < array.length; i++) {
-//     if (array[i] % 2 === 0) {
-//       newArr.push(array[i]);
-//     }
-//   }
-//   return newArr;
-// };
-// console.log(numDivisibleByTwo());
+console.log("program 4");
+const numDivisibleByTwo = () => {
+  let newArr = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      newArr.push(array[i]);
+    }
+  }
+  return newArr;
+};
+console.log(numDivisibleByTwo());
 
-// console.log("program 5");
-// const sumOfAll = () => {
-//   let total = 0;
-//   for (let i = 0; i < array.length; i++) {
-//     total = total + array[i];
-//   }
-//   return total;
-// };
-// console.log(sumOfAll());
+console.log("program 5");
+const sumOfAll = () => {
+  let total = 0;
+  for (let i = 0; i < array.length; i++) {
+    total = total + array[i];
+  }
+  return total;
+};
+console.log(sumOfAll());
 
-// console.log("program 6");
-// const sumOfOddAndEven = () => {
-//   let sumOfOdd = 0;
-//   let sumOfEven = 0;
-//   for (let i = 0; i < array.length; i++) {
-//     if (array[i] % 2 === 0) {
-//       sumOfEven = sumOfEven + array[i];
-//     } else {
-//       sumOfOdd = sumOfOdd + array[i];
-//     }
-//   }
-//   return { sumOfEven, sumOfOdd };
-// };
-// console.log(sumOfOddAndEven());
+console.log("program 6");
+const sumOfOddAndEven = () => {
+  let sumOfOdd = 0;
+  let sumOfEven = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      sumOfEven = sumOfEven + array[i];
+    } else {
+      sumOfOdd = sumOfOdd + array[i];
+    }
+  }
+  return { sumOfEven, sumOfOdd };
+};
+console.log(sumOfOddAndEven());
 
-// console.log("program 1");
-// const car = {
-//   brand: "Honda",
-//   model: "Corolla",
-// };
-// console.log(car.brand);
-// console.log(car.model);
+console.log("program 1");
+const car = {
+  brand: "Honda",
+  model: "Corolla",
+};
+console.log(car.brand);
+console.log(car.model);
 
-// car.brand = "Toyota";
+car.brand = "Toyota";
 
-// console.log(car);
-// car["year"] = 2022;
-// car["color"] = "blue";
-// console.log(car);
-// const printVal = () => {
-//   for (val in car) {
-//     console.log(val, ":", car[val]);
-//   }
-// };
-// printVal();
+console.log(car);
+car["year"] = 2022;
+car["color"] = "blue";
+console.log(car);
+const printVal = () => {
+  for (val in car) {
+    console.log(val, ":", car[val]);
+  }
+};
+printVal();
 
-// console.log("\n");
-// console.log("program 2");
-// const citizen = {
-//   name: "ramu",
-//   age: 29,
-//   occupation: "Doctor",
-// };
-// citizen.age = 68;
-// citizen.age = citizen.age + 2;
-// citizen["city"] = "Delhi";
-// for (value in citizen) {
-//   console.log(value, ":", citizen[value]);
-// }
-// console.log("\n");
+console.log("\n");
+console.log("program 2");
+const citizen = {
+  name: "ramu",
+  age: 29,
+  occupation: "Doctor",
+};
+citizen.age = 68;
+citizen.age = citizen.age + 2;
+citizen["city"] = "Delhi";
+for (value in citizen) {
+  console.log(value, ":", citizen[value]);
+}
+console.log("\n");
 
-// console.log("Program 3");
-// const students = [
-//   { name: "Rahul", rollNo: 101, hindi: 80, english: 75, maths: 90 },
-//   { name: "Amit", rollNo: 102, hindi: 85, english: 70, maths: 95 },
-//   { name: "Priya", rollNo: 103, hindi: 78, english: 92, maths: 87 },
-// ];
+console.log("Program 3");
+const students = [
+  { name: "Rahul", rollNo: 101, hindi: 80, english: 75, maths: 90 },
+  { name: "Amit", rollNo: 102, hindi: 85, english: 70, maths: 95 },
+  { name: "Priya", rollNo: 103, hindi: 78, english: 92, maths: 87 },
+];
 
-// for (let i = 0; i < students.length; i++) {
-//   const marksForComputer = [88, 92, 95];
-//   students[i]["computer"] = marksForComputer[i];
-// }
+for (let i = 0; i < students.length; i++) {
+  const marksForComputer = [88, 92, 95];
+  students[i]["computer"] = marksForComputer[i];
+}
 
-// for (let i = 0; i < students.length; i++) {
-//   const marksForScience = [82, 90, 88];
-//   students[i]["science"] = marksForScience[i];
-// }
-// console.log("students", students);
+for (let i = 0; i < students.length; i++) {
+  const marksForScience = [82, 90, 88];
+  students[i]["science"] = marksForScience[i];
+}
+console.log("students", students);
 
-// const newStudent = {
-//   name: "Kaveri",
-//   rollNo: 104,
-//   hindi: 84,
-//   english: 88,
-//   maths: 78,
-//   computer: 90,
-//   science: 86,
-// };
-// students.push(newStudent);
+const newStudent = {
+  name: "Kaveri",
+  rollNo: 104,
+  hindi: 84,
+  english: 88,
+  maths: 78,
+  computer: 90,
+  science: 86,
+};
+students.push(newStudent);
 
-// const updatedStudentdata = () => {
-//   for (let i = 0; i < students.length; i++) {
-//     for (val in students[i]) {
-//       console.log(val, ":", students[i][val]);
-//     }
-//   }
-// };
+const updatedStudentdata = () => {
+  for (let i = 0; i < students.length; i++) {
+    for (val in students[i]) {
+      console.log(val, ":", students[i][val]);
+    }
+  }
+};
 
-// console.log("updated Student data:", updatedStudentdata());
+console.log("updated Student data:", updatedStudentdata());
 
-// const checkNum = (num) => num % 2 === 0;
-// console.log(checkNum(3));
-// const convert = (str) => str.toUpperCase();
-// console.log(convert("raj"));
+const checkNum = (num) => num % 2 === 0;
+console.log(checkNum(3));
+const convert = (str) => str.toUpperCase();
+console.log(convert("raj"));
 
-// const joinName = (firstName, lastName) => ({ firstName, lastName });
-// console.log(joinName("raja", "akash"));
+const joinName = (firstName, lastName) => ({ firstName, lastName });
+console.log(joinName("raja", "akash"));
 
 // const objectReturn = (str1, str2) => ({
 //   concatenation: str1 + " " + str2,
@@ -454,83 +454,83 @@ console.log(
 //   }
 // });
 
-const taskForm = document.querySelector("#taskForm");
+// const taskForm = document.querySelector("#taskForm");
 
-taskForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+// taskForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
 
-  const weekDays = document.querySelector("#weekDays");
-  const weekEndDays = document.querySelector("#weekEndDays");
+//   const weekDays = document.querySelector("#weekDays");
+//   const weekEndDays = document.querySelector("#weekEndDays");
 
-  const task = document.querySelector("#task").value;
-  const selectDay = document.querySelector("#selectDay").value;
+//   const task = document.querySelector("#task").value;
+//   const selectDay = document.querySelector("#selectDay").value;
 
-  const li = document.createElement("li");
-  li.textContent = task;
+//   const li = document.createElement("li");
+//   li.textContent = task;
 
-  const deleteBtn = document.createElement("button");
-  deleteBtn.textContent = "Delete";
-  deleteBtn.style.marginLeft = "10px";
+//   const deleteBtn = document.createElement("button");
+//   deleteBtn.textContent = "Delete";
+//   deleteBtn.style.marginLeft = "10px";
 
-  deleteBtn.addEventListener("click", () => {
-    li.remove();
-  });
+//   deleteBtn.addEventListener("click", () => {
+//     li.remove();
+//   });
 
-  li.appendChild(deleteBtn);
+//   li.appendChild(deleteBtn);
 
-  if (selectDay === "saturday" || selectDay === "sunday") {
-    weekEndDays.appendChild(li);
-  } else {
-    weekDays.appendChild(li);
-  }
-});
+//   if (selectDay === "saturday" || selectDay === "sunday") {
+//     weekEndDays.appendChild(li);
+//   } else {
+//     weekDays.appendChild(li);
+//   }
+// });
 
-const increment1 = document.querySelector("#increment1");
-const increment2 = document.querySelector("#increment2");
-const total = document.querySelector("#total");
-const count1Container = document.querySelector("#count1");
-const count2Container = document.querySelector("#count2");
-let count1 = 0;
-let count2 = 0;
+// const increment1 = document.querySelector("#increment1");
+// const increment2 = document.querySelector("#increment2");
+// const total = document.querySelector("#total");
+// const count1Container = document.querySelector("#count1");
+// const count2Container = document.querySelector("#count2");
+// let count1 = 0;
+// let count2 = 0;
 
-increment1.addEventListener("click", () => {
-  count1++;
-  count1Container.textContent = count1;
-  comapare();
-});
-increment2.addEventListener("click", () => {
-  count2++;
-  count2Container.textContent = count2;
-  comapare();
-});
+// increment1.addEventListener("click", () => {
+//   count1++;
+//   count1Container.textContent = count1;
+//   comapare();
+// });
+// increment2.addEventListener("click", () => {
+//   count2++;
+//   count2Container.textContent = count2;
+//   comapare();
+// });
 
-const comapare = () => {
-  if (count1 > count2) {
-    total.textContent = `count 1 is greater than count 2 by ${
-      count1 - count2
-    }`;
-  } else if (count2 > count1) {
-    total.textContent = `count 2 is greater than count 1 by ${
-      count2 - count1
-    }`;
-  } else {
-    total.textContent = `count 1 is equal to count 2`;
-  }
-};
+// const comapare = () => {
+//   if (count1 > count2) {
+//     total.textContent = `count 1 is greater than count 2 by ${
+//       count1 - count2
+//     }`;
+//   } else if (count2 > count1) {
+//     total.textContent = `count 2 is greater than count 1 by ${
+//       count2 - count1
+//     }`;
+//   } else {
+//     total.textContent = `count 1 is equal to count 2`;
+//   }
+// };
 
-const printNumbers = () => {
-  let results = [];
-  for (let i = 1; i < 21; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      results.push("FizzBuzz");
-    } else if (i % 5 === 0) {
-      results.push("Buzz");
-    } else if (i % 3 === 0) {
-      results.push("Fizz");
-    } else {
-      results.push(i);
-    }
-  }
+// const printNumbers = () => {
+//   let results = [];
+//   for (let i = 1; i < 21; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       results.push("FizzBuzz");
+//     } else if (i % 5 === 0) {
+//       results.push("Buzz");
+//     } else if (i % 3 === 0) {
+//       results.push("Fizz");
+//     } else {
+//       results.push(i);
+//     }
+//   }
 
 //   const printNumbers = document.getElementById("printNumbers");
 //   results.forEach((item) => {
