@@ -93,73 +93,155 @@
       // );
       // console.log(minnNum);
 
-      const wordsLength = ["apple", "banana", "kiwi", "orange", "grape"];
-      const totalLength = wordsLength.reduce(
+      // const wordsLength = ["apple", "banana", "kiwi", "orange", "grape"];
+      // const totalLength = wordsLength.reduce(
+      //   (acc, curr) => (acc = acc + curr.length),
+      //   0
+      // );
+      // console.log(totalLength);
+
+      // const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      // const totalEvenNum = nums.reduce(
+      //   (acc, curr) => (curr % 2 === 0 ? (acc += 1) : acc),
+      //   0
+      // );
+      // console.log(totalEvenNum);
+
+      // const wordsCaps = ["hello", "world", "how", "are", "you"];
+      // const capitalize = wordsCaps.reduce((acc, curr) => {
+      //   acc = acc + (curr.slice(0, 1).toUpperCase() + curr.slice(1) + " ");
+      //   return acc;
+      // }, "");
+      // console.log(capitalize);
+
+      // const numsAvg = [10, 15, 20, 25, 30];
+      // const averageNum = numsAvg.reduce((acc, curr) => {
+      //   acc = acc + curr;
+
+      //   return acc;
+      // }, 0);
+      // console.log(averageNum / numsAvg.length);
+
+      // const numbers = [1, 2, 3, 4, 5];
+      // const square = numbers.reduce(
+      //   (acc, curr) => (acc = acc + curr * curr),
+      //   0
+      // );
+      // console.log(square);
+
+      // const stationeryWords = [
+      //   "pen",
+      //   "notebook",
+      //   "eraser",
+      //   "notebook",
+      //   "pencil",
+      //   "notebook",
+      //   "pencil",
+      // ];
+      // const occurance = stationeryWords.reduce((acc, curr) => {
+      //   acc[curr] = (acc[curr] || 0) + 1;
+      //   return acc;
+      // }, {});
+      // console.log(occurance);
+
+      // const wordsLetter = ["apple", "banana", "kiwi", "orange", "grape"];
+      // const wordsKey = wordsLetter.reduce((acc, curr) => {
+      //   acc[curr.slice(0, 1)] = (acc[curr] || 0) + 1;
+      //   return acc;
+      // }, {});
+      // console.log(wordsKey);
+
+      // const numPositive = [-2, 3, 4, -5, 6];
+      // const productOfPositive = numPositive.reduce(
+      //   (acc, curr) => (curr > 0 ? (acc *= curr) : acc),
+      //   1
+      // );
+      // console.log(productOfPositive);
+
+      const stationeryWords = [
+        "pen",
+
+        "notebook",
+
+        "eraser",
+
+        "notebook",
+
+        "pencil",
+
+        "notebook",
+
+        "pencil",
+      ];
+
+      const totalLength = stationeryWords.reduce(
         (acc, curr) => (acc = acc + curr.length),
         0
       );
       console.log(totalLength);
 
-      const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-      const totalEvenNum = nums.reduce(
-        (acc, curr) => (curr % 2 === 0 ? (acc += 1) : acc),
+      const numsArr = [11, 22, 32, 14, 15, 62, 17, 18, 29, 10];
+      const totalOddNUm = numsArr.reduce(
+        (acc, curr) => (curr % 2 !== 0 ? (acc += 1) : acc),
         0
       );
-      console.log(totalEvenNum);
+      console.log(totalOddNUm);
 
-      const wordsCaps = ["hello", "world", "how", "are", "you"];
-      const capitalize = wordsCaps.reduce((acc, curr) => {
-        acc = acc + (curr.slice(0, 1).toUpperCase() + curr.slice(1) + " ");
-        return acc;
-      }, "");
-      console.log(capitalize);
-
-      const numsAvg = [10, 15, 20, 25, 30];
-      const averageNum = numsAvg.reduce((acc, curr) => {
-        acc = acc + curr;
-
-        return acc;
-      }, 0);
-      console.log(averageNum / numsAvg.length);
-
-      const numbers = [1, 2, 3, 4, 5];
-      const square = numbers.reduce(
-        (acc, curr) => (acc = acc + curr * curr),
-        0
+      const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      const numEvenOdd = nums.reduce(
+        (acc, curr) => {
+          let key = curr % 2 === 0 ? "even" : "odd";
+          acc[key].push(curr);
+          return acc;
+        },
+        { even: [], odd: [] }
       );
-      console.log(square);
 
-      const stationeryWords = [
-        "pen",
-        "notebook",
-        "eraser",
-        "notebook",
-        "pencil",
-        "notebook",
-        "pencil",
+      console.log(numEvenOdd);
+
+      const allNumns = [1, 2, -3, 4, 5, -6, 7, -8, -9, 12];
+      const positieNegative = allNumns.reduce(
+        (acc, curr) => {
+          curr > 0 ? (acc.pos += 1) : (acc.neg += 1);
+          return acc;
+        },
+        { pos: 0, neg: 0 }
+      );
+      console.log(positieNegative);
+
+      const numPositive = [-2, 3, 4, 0, -5, 6];
+      const prodNeg = numPositive.reduce((acc, curr) => {
+        curr < 0 ? (acc = acc * curr) : acc;
+        return acc;
+      }, 1);
+      console.log(prodNeg);
+
+      const wordsCaps = [
+        "reduce",
+        "method",
+        "needs",
+        "a",
+        "lot",
+        "of",
+        "practice",
       ];
-      const occurance = stationeryWords.reduce((acc, curr) => {
-        acc[curr] = (acc[curr] || 0) + 1;
-        return acc;
-      }, {});
-      console.log(occurance);
-
-      const wordsLetter = ["apple", "banana", "kiwi", "orange", "grape"];
-      const wordsKey = wordsLetter.reduce((acc, curr) => {
-        acc[curr.slice(0, 1)] = (acc[curr] || 0) + 1;
-        return acc;
-      }, {});
-      console.log(wordsKey);
-
-      const numPositive = [-2, 3, 4, -5, 6];
-      const productOfPositive = numPositive.reduce(
-        (acc, curr) => (curr > 0 ? (acc *= curr) : acc),
-        1
+      const capsAll = wordsCaps.reduce(
+        (acc, curr) => (acc = acc + curr.toUpperCase() + " "),
+        ""
       );
-      console.log(productOfPositive);
+      console.log(capsAll);
 
+      // const allNumsArr = [1, 2, -3, 4, 5, -6, 7, -8, -9, 12];
+      // const countAll = allNumsArr.reduce(
+      //   (acc, curr) => {
+      //     curr > 0 && curr % 2 === 0 ? (acc.posEven += 1) : (acc.others += 1);
+      //     return acc;
+      //   },
 
-      
+      //   { posEven: 0, others: 0 }
+      // );
+      // console.log(countAll);
+
       // const products = [
       //   { name: "Shirt", price: 20 },
       //   { name: "Jeans", price: 40 },
