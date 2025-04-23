@@ -950,50 +950,50 @@ generateBtn.addEventListener("click", generateMultiples);
       // console.log(b); // ReferenceError
       // let b = 10;
 
-      // greet();
-      // function greet() {
-      //   console.log("Hello!");
-      // }
+      greet();
+      function greet() {
+        console.log("Hello!");
+      }
 
-      // sayHi();
-      // const sayHi = () => {
-      //   console.log("Hi");
-      // };
+      sayHi();
+      const sayHi = () => {
+        console.log("Hi");
+      };
 
-      // let count = 0;
-      // (function () {
-      //   count++;
-      //   console.log(count);
-      // })();
+      let count = 0;
+      (function () {
+        count++;
+        console.log(count);
+      })();
 
-      // const obj = {
-      //   name: "JS",
-      //   print: function () {
-      //     console.log(this.name);
-      //   },
-      // };
-      // obj.print();
+      const obj = {
+        name: "JS",
+        print: function () {
+          console.log(this.name);
+        },
+      };
+      obj.print();
 
-      // const arr = [10, 20, 30];
-      // const [a, , b] = arr;
-      // console.log(a, b);
-      // // 10 20
+      const arr = [10, 20, 30];
+      const [a, , b] = arr;
+      console.log(a, b);
+      // 10 20
 
-      // const person = {
-      //   name: "Raja",
-      //   age: 21,
-      // };
+      const person = {
+        name: "Raja",
+        age: 21,
+      };
 
-      // const updated = { ...person, age: 22 };
-      // console.log(updated.age);
-      // //22
+      const updated = { ...person, age: 22 };
+      console.log(updated.age);
+      //22
 
-      // function sum(...nums) {
-      //   return nums.reduce((acc, cur) => acc + cur, 0);
-      // }
+      function sum(...nums) {
+        return nums.reduce((acc, cur) => acc + cur, 0);
+      }
 
-      // sum(5, 10, 15);
-      // //30
+      sum(5, 10, 15);
+      //30
 
       // const user = {
       //   name: "Akash",

@@ -6,11 +6,15 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="text" id="search" />
-    <button id="searchBtn">search</button>
-    <div style="height: 1000vh">
+    <!-- <input type="text" id="search" /> -->
+    <!-- <button id="searchBtn">search</button> -->
+    <!-- <div style="height: 1000vh">
       <h1></h1>
-    </div>
+    </div> -->
+
+    <input type="text" id="searchInput" placeholder="Search here..." />
+    <button id="searchBtn">Search</button>
+
     <!-- <div>
       <h4>Numbers:</h4>
       <ul id="printNumbers"></ul>
@@ -63,6 +67,208 @@
     </div> -->
 
     <script>
+      // const searchBtn = document.querySelector("#searchBtn");
+
+      // const debounce = (func, delay) => {
+      //   let timer;
+      //   return function (...args) {
+      //     clearTimeout(timer);
+      //     timer = setTimeout(() => {
+      //       func.apply(this, args);
+      //     }, delay);
+      //   };
+      // };
+
+      // const handleSearch = () => {
+      //   const searchText = document.querySelector("#searchInput").value;
+      //   console.log("searchText", searchText);
+      // };
+
+      // searchBtn.addEventListener("click", debounce(handleSearch, 1000));
+
+      // const numbers = [10, 5, 8, 20, 15];
+      // const minnNum = numbers.reduce(
+      //   (acc, curr) => (acc > curr ? (acc = curr) : acc),
+      //   numbers[0]
+      // );
+      // console.log(minnNum);
+
+      const wordsLength = ["apple", "banana", "kiwi", "orange", "grape"];
+      const totalLength = wordsLength.reduce(
+        (acc, curr) => (acc = acc + curr.length),
+        0
+      );
+      console.log(totalLength);
+
+      const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      const totalEvenNum = nums.reduce(
+        (acc, curr) => (curr % 2 === 0 ? (acc += 1) : acc),
+        0
+      );
+      console.log(totalEvenNum);
+
+      const wordsCaps = ["hello", "world", "how", "are", "you"];
+      const capitalize = wordsCaps.reduce((acc, curr) => {
+        acc = acc + (curr.slice(0, 1).toUpperCase() + curr.slice(1) + " ");
+        return acc;
+      }, "");
+      console.log(capitalize);
+
+      const numsAvg = [10, 15, 20, 25, 30];
+      const averageNum = numsAvg.reduce((acc, curr) => {
+        acc = acc + curr;
+
+        return acc;
+      }, 0);
+      console.log(averageNum / numsAvg.length);
+
+      const numbers = [1, 2, 3, 4, 5];
+      const square = numbers.reduce(
+        (acc, curr) => (acc = acc + curr * curr),
+        0
+      );
+      console.log(square);
+
+      const stationeryWords = [
+        "pen",
+        "notebook",
+        "eraser",
+        "notebook",
+        "pencil",
+        "notebook",
+        "pencil",
+      ];
+      const occurance = stationeryWords.reduce((acc, curr) => {
+        acc[curr] = (acc[curr] || 0) + 1;
+        return acc;
+      }, {});
+      console.log(occurance);
+
+      const wordsLetter = ["apple", "banana", "kiwi", "orange", "grape"];
+      const wordsKey = wordsLetter.reduce((acc, curr) => {
+        acc[curr.slice(0, 1)] = (acc[curr] || 0) + 1;
+        return acc;
+      }, {});
+      console.log(wordsKey);
+
+      const numPositive = [-2, 3, 4, -5, 6];
+      const productOfPositive = numPositive.reduce(
+        (acc, curr) => (curr > 0 ? (acc *= curr) : acc),
+        1
+      );
+      console.log(productOfPositive);
+
+
+      
+      // const products = [
+      //   { name: "Shirt", price: 20 },
+      //   { name: "Jeans", price: 40 },
+      //   { name: "Hat", price: 10 },
+      // ];
+
+      // const total = products.reduce((acc, curr) => {
+      //   acc = acc + curr.price;
+      //   return acc;
+      // }, 0);
+      // console.log(total);
+
+      // const words = ["sun", "elephant", "car", "bicycle"];
+      // const longestWorld = words.reduce((acc, curr) => {
+      //   curr.length > acc.length ? (acc = curr) : acc;
+      //   return acc;
+      // }, "");
+      // console.log(longestWorld);
+
+      // console.log(numResult);
+
+      // const people = [
+      //   { id: 101, name: "Raj" },
+      //   { id: 102, name: "Simran" },
+      // ];
+      // const convert = people.reduce((acc, curr) => {
+      //   acc[curr.id] = curr.name;
+      //   return acc;
+      // }, {});
+      // console.log(convert);
+
+      // const str = "hello";
+      // const strValue = str.split("");
+      // console.log(
+      //   strValue.reduce((acc, curr) => {
+      //     acc[curr] = (acc[curr] || 0) + 1;
+      //     return acc;
+      //   }, {})
+      // );
+
+      // const nums = [1, 2, 3, 4, 5, 6];
+      // const numResult = nums.reduce(
+      //   (acc, curr) => {
+      //     let key = curr % 2 === 0 ? "even" : "odd";
+      //     acc[key].push(curr);
+      //     return acc;
+      //   },
+      //   { even: [], odd: [] }
+      // );
+      // console.log(numResult);
+
+      // const numbers = [3, -2, 7, -5, -1, 4];
+      // const group = numbers.reduce(
+      //   (acc, curr) => {
+      //     const key = curr > 0 ? "Positive" : "Negative";
+      //     acc[key].push(curr);
+      //     return acc;
+      //   },
+      //   { Positive: [], Negative: [] }
+      // );
+      // console.log(group);
+
+      // const sentence = "code and code and learn";
+      // const sentenceSplit = sentence.split(" ");
+      // const sentenceValue = sentenceSplit.reduce((acc, curr) => {
+      //   acc[curr] = (acc[curr] || 0) + 1;
+      //   return acc;
+      // }, {});
+      // console.log(sentenceValue);
+
+      // const students = [
+      //   { name: "Arun", grade: "A" },
+      //   { name: "Meena", grade: "B" },
+      //   { name: "Kiran", grade: "A" },
+      //   { name: "Ravi", grade: "C" },
+      // ];
+      // const gradeStudent = students.reduce(
+      //   (acc, curr) => {
+      //     let key;
+      //     if (curr.grade === "A") {
+      //       key = "A";
+      //     } else if (curr.grade === "B") {
+      //       key = "B";
+      //     } else {
+      //       key = "C";
+      //     }
+      //     acc[key].push(curr.name);
+      //     return acc;
+      //   },
+      //   { A: [], B: [], C: [] }
+      // );
+      // console.log(gradeStudent);
+
+      // const digits = [1, 2, 3, 2, 1, 4, 2];
+      // const countDigit = digits.reduce((acc, curr) => {
+      //   acc[curr] = (acc[curr] || 0) + 1;
+      //   return acc;
+      // }, {});
+      // console.log(countDigit);
+
+      // const fruits = ["apple", "banana", "apricot", "blueberry", "cherry"];
+      // const fruitsGroup = fruits.reduce((acc, curr) => {
+      //   let key = curr[0];
+      //   if (!acc[key]) acc[key] = [];
+      //   acc[key].push(curr);
+      //   return acc;
+      // }, {});
+      // console.log(fruitsGroup);
+
       // function show() {
       //   console.log(this);
       // }
@@ -123,25 +329,25 @@
       //   handleSearch(search);
       // });
 
-      function debounce(func, delay) {
-        let timer;
-        return function (...args) {
-          clearTimeout(timer);
-          timer = setTimeout(() => func.apply(this, args), delay);
-        };
-      }
+      // function debounce(func, delay) {
+      //   let timer;
+      //   return function (...args) {
+      //     clearTimeout(timer);
+      //     timer = setTimeout(() => func.apply(this, args), delay);
+      //   };
+      // }
 
-      const handleSearch = debounce(
-        (searchedValue) => console.log(searchedValue),
-        1500
-      );
+      // const handleSearch = debounce(
+      //   (searchedValue) => console.log(searchedValue),
+      //   1500
+      // );
 
-      const searchBtn = document.querySelector("#searchBtn");
+      // const searchBtn = document.querySelector("#searchBtn");
 
-      searchBtn.addEventListener("click", () => {
-        const searchInput = document.querySelector("#search").value;
-        handleSearch(searchInput);
-      });
+      // searchBtn.addEventListener("click", () => {
+      //   const searchInput = document.querySelector("#search").value;
+      //   handleSearch(searchInput);
+      // });
 
       // function debounce(func, delay) {
       //   let timer;
@@ -168,30 +374,30 @@
       //   };
       // }
 
-      function throttle(func, delay) {
-        let lastCall = 0;
-        return function (...args) {
-          const now = Date.now();
-          if (now - lastCall >= delay) {
-            lastCall = now;
-            func.apply(this, args);
-          }
-        };
-      }
+      // function throttle(func, delay) {
+      //   let lastCall = 0;
+      //   return function (...args) {
+      //     const now = Date.now();
+      //     if (now - lastCall >= delay) {
+      //       lastCall = now;
+      //       func.apply(this, args);
+      //     }
+      //   };
+      // }
 
-      const throttledScroll = throttle(() => console.log("Scrolled"), 2000);
-      window.addEventListener("scroll", throttledScroll);
+      // const throttledScroll = throttle(() => console.log("Scrolled"), 2000);
+      // window.addEventListener("scroll", throttledScroll);
 
-      function greetUser(greetingFn) {
-        const name = "Akash";
-        greetingFn(name);
-      }
+      // function greetUser(greetingFn) {
+      //   const name = "Akash";
+      //   greetingFn(name);
+      // }
 
-      const sayHello = (name) => {
-        console.log(`Hello, ${name}!`);
-      };
+      // const sayHello = (name) => {
+      //   console.log(`Hello, ${name}!`);
+      // };
 
-      greetUser(sayHello);
+      // greetUser(sayHello);
 
       // const numbers = [10, 20, 30, 40];
       // const sumOfAll = numbers.reduce((acc, curr) => {
@@ -311,63 +517,63 @@
       // }, {});
       // console.log("animalsResult", animalsResult);
 
-      const numbers = [1, 2, 3, 4, 5, 6];
-      const numbersResult = numbers.reduce((acc, curr) => {
-        let odd = 0;
-        let even = 0;
-        if (curr % 2 == 0) {
-          even++;
-          acc["even"] = (acc["even"] || 0) + 1;
-        } else {
-          odd++;
-          acc["odd"] = (acc["odd"] || 0) + 1;
-        }
-        return acc;
-      }, {});
-      console.log("numbersResult", numbersResult);
+      // const numbers = [1, 2, 3, 4, 5, 6];
+      // const numbersResult = numbers.reduce((acc, curr) => {
+      //   let odd = 0;
+      //   let even = 0;
+      //   if (curr % 2 == 0) {
+      //     even++;
+      //     acc["even"] = (acc["even"] || 0) + 1;
+      //   } else {
+      //     odd++;
+      //     acc["odd"] = (acc["odd"] || 0) + 1;
+      //   }
+      //   return acc;
+      // }, {});
+      // console.log("numbersResult", numbersResult);
 
-      const pairs = [
-        ["name", "Alice"],
-        ["age", 25],
-        ["role", "developer"],
-      ];
-      const pairsResult = pairs.reduce((acc, curr) => {
-        acc[curr[0]] = curr[1];
-        return acc;
-      }, {});
-      console.log("pairsResult", pairsResult);
+      // const pairs = [
+      //   ["name", "Alice"],
+      //   ["age", 25],
+      //   ["role", "developer"],
+      // ];
+      // const pairsResult = pairs.reduce((acc, curr) => {
+      //   acc[curr[0]] = curr[1];
+      //   return acc;
+      // }, {});
+      // console.log("pairsResult", pairsResult);
 
-      const users = [
-        { name: "Alice", age: 30 },
-        { name: "Bob", age: 24 },
-        { name: "Charlie", age: 28 },
-      ];
+      // const users = [
+      //   { name: "Alice", age: 30 },
+      //   { name: "Bob", age: 24 },
+      //   { name: "Charlie", age: 28 },
+      // ];
 
-      const totalAge = users.reduce((acc, curr) => acc + curr.age, 0);
-      const averageAge = (totalAge / users.length).toFixed(2);
+      // const totalAge = users.reduce((acc, curr) => acc + curr.age, 0);
+      // const averageAge = (totalAge / users.length).toFixed(2);
 
-      console.log("Average Age:", averageAge);
+      // console.log("Average Age:", averageAge);
 
-      const users2 = [
-        { name: "Alice", role: "admin" },
-        { name: "Bob", role: "user" },
-        { name: "Charlie", role: "admin" },
-      ];
+      // const users2 = [
+      //   { name: "Alice", role: "admin" },
+      //   { name: "Bob", role: "user" },
+      //   { name: "Charlie", role: "admin" },
+      // ];
 
-      const uniqueRoles = users2.reduce((acc, curr) => {
-        if (!acc.includes(curr.role)) {
-          acc.push(curr.role);
-        }
-        return acc;
-      }, []);
+      // const uniqueRoles = users2.reduce((acc, curr) => {
+      //   if (!acc.includes(curr.role)) {
+      //     acc.push(curr.role);
+      //   }
+      //   return acc;
+      // }, []);
 
-      console.log("Unique Roles:", uniqueRoles);
+      // console.log("Unique Roles:", uniqueRoles);
 
-      users2.forEach((user) => {
-        console.log(user.role);
-      });
+      // users2.forEach((user) => {
+      //   console.log(user.role);
+      // });
 
-      console.log(users2.map((user) => user.role));
+      // console.log(users2.map((user) => user.role));
 
       // const name = "raj";
       // {
@@ -376,132 +582,130 @@
       // }
       // console.log(name);
 
-      console.log(name2);
-      var name2 = "raj";
+      // console.log(name2);
+      // var name2 = "raj";
 
-      printName();
-      function printName() {
-        console.log("raj");
-      }
+      // printName();
+      // function printName() {
+      //   console.log("raj");
+      // }
 
-      const printName2 = () => console.log("Akash");
-      printName2();
+      // const printName2 = () => console.log("Akash");
+      // printName2();
 
-      const obj1 = {
-        name: "raj kumar",
-        callTeacher: function () {
-          console.log(this.name);
-        },
-      };
+      // const obj1 = {
+      //   name: "raj kumar",
+      //   callTeacher: function () {
+      //     console.log(this.name);
+      //   },
+      // };
 
-      obj1.callTeacher();
+      // obj1.callTeacher();
 
-      const user = {
-        name: "Emma",
-        greet() {
-          console.log(`Hello, ${this.name}`);
-        },
-      };
+      // const user = {
+      //   name: "Emma",
+      //   greet() {
+      //     console.log(`Hello, ${this.name}`);
+      //   },
+      // };
 
-      const greetUser2 = user.greet;
-      greetUser2();
+      // const greetUser2 = user.greet;
+      // greetUser2();
 
-      const person = {
-        name: "James",
-        logInfo: function () {
-          setTimeout(() => {
-            console.log(`${this.name}`);
-          }, 1000);
-        },
-      };
+      // const person = {
+      //   name: "James",
+      //   logInfo: function () {
+      //     setTimeout(() => {
+      //       console.log(`${this.name}`);
+      //     }, 1000);
+      //   },
+      // };
 
-      person.logInfo();
+      // person.logInfo();
 
-      const greeting = function () {
-        console.log(`Hello, ${this.name}`);
-      };
+      // const greeting = function () {
+      //   console.log(`Hello, ${this.name}`);
+      // };
 
-      const user1 = { name: "John" };
-      const user2 = { name: "Jane" };
+      // const user1 = { name: "John" };
+      // const user2 = { name: "Jane" };
 
-      greeting.call(user1);
-      greeting.call(user2);
+      // greeting.call(user1);
+      // greeting.call(user2);
 
-      function displayInfo(age) {
-        console.log(`${this.name} is ${age} years old.`);
-      }
+      // function displayInfo(age) {
+      //   console.log(`${this.name} is ${age} years old.`);
+      // }
 
-      const obj2 = { name: "Lucas" };
-      const obj3 = { name: "Anna" };
+      // const obj2 = { name: "Lucas" };
+      // const obj3 = { name: "Anna" };
 
-      displayInfo.apply(obj2, [25]);
-      displayInfo.apply(obj3, [30]);
+      // displayInfo.apply(obj2, [25]);
+      // displayInfo.apply(obj3, [30]);
 
-      function show() {
-        console.log(this);
-      }
+      // function show() {
+      //   console.log(this);
+      // }
 
-      show();
+      // show();
 
-      const obj = {
-        count: 0,
-        increment: function () {
-          setInterval(() => {
-            this.count++;
-            console.log(this.count);
-          }, 1000);
-        },
-      };
+      // const obj = {
+      //   count: 0,
+      //   increment: function () {
+      //     setInterval(() => {
+      //       this.count++;
+      //       console.log(this.count);
+      //     }, 1000);
+      //   },
+      // };
 
-      // obj.increment();
+      // // obj.increment();
 
-      function Person(name, age) {
-        this.name = name;
-        this.age = age;
-        this.greet = function () {
-          console.log(`Hello, ${this.name}`);
-        };
-      }
+      // function Person(name, age) {
+      //   this.name = name;
+      //   this.age = age;
+      //   this.greet = function () {
+      //     console.log(`Hello, ${this.name}`);
+      //   };
+      // }
 
-      const person1 = new Person("John", 30);
-      person1.greet();
+      // const person1 = new Person("John", 30);
+      // person1.greet();
 
-      let promise1 = new Promise((resolve) => {
-        setTimeout(() => resolve("First"), 5000);
-      });
-      let promise2 = new Promise((resolve) =>
-        setTimeout(resolve, 2000, "Second got Error")
-      );
-      let promise3 = new Promise((resolve) =>
-        setTimeout(resolve, 3000, "Third")
-      );
+      // let promise1 = new Promise((resolve) => {
+      //   setTimeout(() => resolve("First"), 5000);
+      // });
+      // let promise2 = new Promise((resolve) =>
+      //   setTimeout(resolve, 2000, "Second got Error")
+      // );
+      // let promise3 = new Promise((resolve) =>
+      //   setTimeout(resolve, 3000, "Third")
+      // );
 
-      Promise.all([promise1, promise2, promise3])
-        .then((result) => console.log(result))
-        .catch((error) => console.error(error));
+      // Promise.all([promise1, promise2, promise3])
+      //   .then((result) => console.log(result))
+      //   .catch((error) => console.error(error));
 
-      Promise.allSettled([promise1, promise2, promise3]).then((results) => {
-        console.log(results);
-      });
+      // Promise.allSettled([promise1, promise2, promise3]).then((results) => {
+      //   console.log(results);
+      // });
 
-      let promise4 = new Promise((resolve) =>
-        setTimeout(resolve, 1000, "First")
-      );
-      let promise5 = new Promise((resolve) =>
-        setTimeout(resolve, 2000, "Second")
-      );
+      // let promise4 = new Promise((resolve) =>
+      //   setTimeout(resolve, 1000, "First")
+      // );
+      // let promise5 = new Promise((resolve) =>
+      //   setTimeout(resolve, 2000, "Second")
+      // );
 
-      Promise.race([promise4, promise5]).then((result) => {
-        console.log("race result: ", result);
-      });
+      // Promise.race([promise4, promise5]).then((result) => {
+      //   console.log("race result: ", result);
+      // });
 
-      const obj5 = { name: "Raj" };
-      const obj6 = { ...obj5 };
-      obj6.age = 23;
-      console.log("Object ", obj5);
-      console.log("Object ", obj6);
-
-      
+      // const obj5 = { name: "Raj" };
+      // const obj6 = { ...obj5 };
+      // obj6.age = 23;
+      // console.log("Object ", obj5);
+      // console.log("Object ", obj6);
     </script>
   </body>
 </html>
