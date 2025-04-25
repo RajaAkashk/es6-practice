@@ -93,6 +93,237 @@
       // );
       // console.log(minnNum);
 
+      const numsArray = [10, 5, 8, 4, 6];
+      const numNewArr = numsArray.reduce((acc, curr) => {
+        acc.push(curr - curr * curr);
+        return acc;
+      }, []);
+      console.log(numNewArr);
+
+      const numArr2 = numsArray.map((num) => num - num * num);
+      console.log(numArr2);
+
+      const numbsArray = [3, -2, -5, 12, 8, -4, 7];
+      const numArr3 = numbsArray.map((num) => (num < 0 ? num - num * 2 : num));
+      console.log(numArr3);
+
+      const sentencesArray = [
+        "JavaScript is a powerful programming language.",
+
+        "Web development involves frontend and backend technologies.",
+
+        "Coding is a skill that can be learned and mastered over time.",
+      ];
+      const sentenceArr = sentencesArray.map(
+        (str) => str + str.split(" ").length
+      );
+      console.log(sentenceArr);
+
+      const cars = [
+        { brand: "Toyota", model: "Camry" },
+
+        { brand: "Honda", model: "Accord" },
+
+        { brand: "Ford", model: "Mustang" },
+      ];
+      const brandArr = cars.map((car) => car.brand);
+      console.log(brandArr);
+
+      const movies = [
+        { title: "Inception", genre: "Sci-Fi" },
+
+        { title: "The Shawshank Redemption", genre: "Drama" },
+
+        { title: "The Dark Knight", genre: "Action" },
+      ];
+      const moviesArr = movies.map((movie) => movie.genre);
+      console.log(moviesArr);
+
+      const printMovie = movies.forEach((movie) => console.log(movie.genre));
+
+      const furniture = [
+        { type: "Sofa", width: 200, height: 80 },
+
+        { type: "Table", width: 120, height: 60 },
+
+        { type: "Chair", width: 50, height: 45 },
+      ];
+      const incresedDimension = furniture.map((data) => {
+        data.width = data.width + data.width * 0.1;
+        data.height = data.height + data.height * 0.1;
+        return data;
+      });
+      console.log(incresedDimension);
+
+      const products = [
+        { name: "Laptop", price: 1200 },
+
+        { name: "Smartphone", price: 800 },
+
+        { name: "Headphones", price: 50 },
+
+        { name: "Camera", price: 300 },
+      ];
+
+      const NewProducts = products.map((product) => {
+        product.price <= 100 ? (product["affordable"] = true) : null;
+        return product;
+      });
+      console.log("NewProducts", NewProducts);
+
+      const numbers = [12, 7, 15, -8, 22, -10, 5, 13, -18];
+      const newNumArr = numbers.filter((num) => num < 0);
+      console.log(newNumArr);
+
+      const students = [
+        { name: "Alice", score: 85, activeParticipant: true, club: "Math" },
+
+        { name: "Bob", score: 55, activeParticipant: false, club: "History" },
+
+        {
+          name: "Charlie",
+          score: 75,
+          activeParticipant: true,
+          club: "Science",
+        },
+      ];
+      const filteresStudents = students.filter(
+        (student) =>
+          student.score > 70 &&
+          student.activeParticipant === true &&
+          (student.club === "Math" || "Science")
+      );
+      console.log(filteresStudents);
+
+      const filteresStudents2 = () => {
+        let filteresArr = [];
+        for (let i = 0; i < students.length; i++) {
+          if (
+            (students[i].score > 75 &&
+              students[i].activeParticipant === true &&
+              students[i].club === "Math") ||
+            students[i].club === "Science"
+          ) {
+            filteresArr.push(students[i]);
+          }
+        }
+        return filteresArr;
+      };
+      console.log(filteresStudents2());
+
+      const arrr = [11, 12, 12, 11, 23, 34];
+      const arrResult = arrr.reduce((acc, curr) => {
+        acc[curr] = (acc[curr] || 0) + 1;
+        return acc;
+      }, {});
+      console.log(arrResult);
+
+   
+
+      // const data = [
+      //   { key: "item", value: "Pencil" },
+
+      //   { key: "price", value: 250 },
+
+      //   { key: "inStock", value: true },
+      // ];
+      // const oneObj = data.reduce((acc, curr) => {
+      //   acc[curr.key] = curr.value;
+      //   return acc;
+      // }, {});
+      // console.log(oneObj);
+
+      // const students = [
+      //   { item: "Pen", color: "blue" },
+
+      //   { item: "Pen", color: "black" },
+
+      //   { item: "Pen", color: "red" },
+      // ];
+      // const oneObj2 = students.reduce((acc, curr) => {
+      //   acc.push(curr.color);
+      //   return acc;
+      // }, []);
+      // console.log(oneObj2);
+
+      // const countries = [
+      //   { item: "Car", manufacturingCity: "New York" },
+
+      //   { item: "Car", manufacturingCity: "Los Angeles" },
+
+      //   { item: "Car", manufacturingCity: "Chicago" },
+      // ];
+      // const countriesArr = countries.reduce((acc, curr) => {
+      //   acc.push(curr.manufacturingCity);
+      //   return acc;
+      // }, []);
+      // console.log(countriesArr);
+
+      // const groceryItems = [
+      //   { item: "Fruit", name: "Apple" },
+
+      //   { item: "Fruit", name: "Banana" },
+
+      //   { item: "Fruit", name: "Orange" },
+      // ];
+      // const fuitObj = groceryItems.reduce((acc, curr) => {
+      //   acc.push(curr.name);
+      //   return acc;
+      // }, []);
+      // console.log(fuitObj);
+
+      // const details = [
+      //   { key: "category", value: "Electronics" },
+
+      //   { key: "rating", value: 4.5 },
+
+      //   { key: "available", value: true },
+      // ];
+      // const detailsObj = details.reduce((acc, curr) => {
+      //   acc[curr.key] = curr.value;
+      //   return acc;
+      // }, {});
+      // console.log(detailsObj);
+
+      // const productInfo = [
+      //   { key: "name", value: "Laptop" },
+
+      //   { key: "price", value: 12000 },
+
+      //   { key: "brand", value: "Dell" },
+      // ];
+      // const ProductObj = productInfo.reduce((acc, curr) => {
+      //   acc[curr.key] = curr.value;
+      //   return acc;
+      // }, {});
+      // console.log(ProductObj);
+
+      // const colleges = [
+      //   { item: "Book", university: "Harvard" },
+
+      //   { item: "Book", university: "MIT" },
+
+      //   { item: "Book", university: "Stanford" },
+      // ];
+      // const collegesArr = colleges.reduce((acc, curr) => {
+      //   acc.push(curr.university);
+      //   return acc;
+      // }, []);
+      // console.log(collegesArr);
+
+      // const userPreferences = [
+      //   { key: "theme", value: "Dark Mode" },
+
+      //   { key: "fontSize", value: 16 },
+
+      //   { key: "notifications", value: true },
+      // ];
+      // const userPreferencesObj = userPreferences.reduce((acc,curr) => {
+      //   acc[curr.key] = curr.value;
+      //   return acc;
+      // },{})
+      // console.log(userPreferencesObj)
+
       // const wordsLength = ["apple", "banana", "kiwi", "orange", "grape"];
       // const totalLength = wordsLength.reduce(
       //   (acc, curr) => (acc = acc + curr.length),
@@ -158,108 +389,108 @@
       // );
       // console.log(productOfPositive);
 
-      const stationeryWords = [
-        "pen",
+      // const stationeryWords = [
+      //   "pen",
 
-        "notebook",
+      //   "notebook",
 
-        "eraser",
+      //   "eraser",
 
-        "notebook",
+      //   "notebook",
 
-        "pencil",
+      //   "pencil",
 
-        "notebook",
+      //   "notebook",
 
-        "pencil",
-      ];
+      //   "pencil",
+      // ];
 
-      const totalLength = stationeryWords.reduce(
-        (acc, curr) => (acc = acc + curr.length),
-        0
-      );
-      console.log(totalLength);
+      // const totalLength = stationeryWords.reduce(
+      //   (acc, curr) => (acc = acc + curr.length),
+      //   0
+      // );
+      // console.log(totalLength);
 
-      const numbersArray = [1, 2, 3, 4, 5, 6];
-      const sumEven = numbersArray.reduce((acc, curr) => {
-        curr % 2 === 0 ? (acc = acc + curr) : acc;
-        return acc;
-      }, 0);
-      console.log(sumEven);
+      // const numbersArray = [1, 2, 3, 4, 5, 6];
+      // const sumEven = numbersArray.reduce((acc, curr) => {
+      //   curr % 2 === 0 ? (acc = acc + curr) : acc;
+      //   return acc;
+      // }, 0);
+      // console.log(sumEven);
 
-      const numsArr = [11, 22, 32, 14, 15, 62, 17, 18, 29, 10];
-      const oddNum = numsArr.reduce((acc, curr) => {
-        curr % 2 !== 0 ? acc++ : acc;
-        return acc;
-      }, 0);
+      // const numsArr = [11, 22, 32, 14, 15, 62, 17, 18, 29, 10];
+      // const oddNum = numsArr.reduce((acc, curr) => {
+      //   curr % 2 !== 0 ? acc++ : acc;
+      //   return acc;
+      // }, 0);
 
-      console.log(oddNum);
+      // console.log(oddNum);
 
-      const allNumns = [1, 2, -3, 4, 5, -6, 7, -8, -9, 12];
-      const numAll = allNumns.reduce(
-        (acc, curr) => {
-          curr > 0 ? acc.pos.push(curr) : acc.neg.push(curr);
-          return acc;
-        },
-        { pos: [], neg: [] }
-      );
-      console.log(numAll);
+      // const allNumns = [1, 2, -3, 4, 5, -6, 7, -8, -9, 12];
+      // const numAll = allNumns.reduce(
+      //   (acc, curr) => {
+      //     curr > 0 ? acc.pos.push(curr) : acc.neg.push(curr);
+      //     return acc;
+      //   },
+      //   { pos: [], neg: [] }
+      // );
+      // console.log(numAll);
 
-      const numAll2 = allNumns.reduce(
-        (acc, curr) => {
-          curr > 0 ? (acc.pos += 1) : (acc.neg += 1);
-          return acc;
-        },
-        { pos: 0, neg: 0 }
-      );
-      console.log(numAll2);
+      // const numAll2 = allNumns.reduce(
+      //   (acc, curr) => {
+      //     curr > 0 ? (acc.pos += 1) : (acc.neg += 1);
+      //     return acc;
+      //   },
+      //   { pos: 0, neg: 0 }
+      // );
+      // console.log(numAll2);
 
-      const wordsCaps = [
-        "reduce",
-        "method",
-        "needs",
-        "a",
-        "lot",
-        "of",
-        "practice",
-      ];
-      const addWords = wordsCaps.reduce((acc, curr) => {
-        acc = acc + curr.toUpperCase() + " ";
-        return acc;
-      }, "");
-      console.log(addWords);
+      // const wordsCaps = [
+      //   "reduce",
+      //   "method",
+      //   "needs",
+      //   "a",
+      //   "lot",
+      //   "of",
+      //   "practice",
+      // ];
+      // const addWords = wordsCaps.reduce((acc, curr) => {
+      //   acc = acc + curr.toUpperCase() + " ";
+      //   return acc;
+      // }, "");
+      // console.log(addWords);
 
-      const allNumsArr = [1, 2, -3, 4, 5, -6, 7, -8, -9, 12];
-      const numArrCount = allNumsArr.reduce(
-        (acc, curr) => {
-          curr > 0 && curr % 2 === 0
-            ? acc.posEven.push(curr)
-            : acc.others.push(curr);
-          return acc;
-        },
-        { posEven: [], others: [] }
-      );
-      console.log(numArrCount);
+      // const allNumsArr = [1, 2, -3, 4, 5, -6, 7, -8, -9, 12];
+      // const numArrCount = allNumsArr.reduce(
+      //   (acc, curr) => {
+      //     curr > 0 && curr % 2 === 0
+      //       ? acc.posEven.push(curr)
+      //       : acc.others.push(curr);
+      //     return acc;
+      //   },
+      //   { posEven: [], others: [] }
+      // );
+      // console.log(numArrCount);
 
-      const numArrCount2 = allNumsArr.reduce(
-        (acc, curr) => {
-          curr > 0 && curr % 2 === 0 ? (acc.posEven += 1) : (acc.others += 1);
-          return acc;
-        },
-        { posEven: 0, others: 0 }
-      );
-      console.log(numArrCount2);
+      // const numArrCount2 = allNumsArr.reduce(
+      //   (acc, curr) => {
+      //     curr > 0 && curr % 2 === 0 ? (acc.posEven += 1) : (acc.others += 1);
+      //     return acc;
+      //   },
+      //   { posEven: 0, others: 0 }
+      // );
+      // console.log(numArrCount2);
 
-      const numbersArr = [1, -2, -3, 4, -5, 6, 7, -9, 12, 11];
-      const sumNeg = numbersArr.reduce(
-        (acc, curr) => (curr < 0 ? (acc += curr) : acc),
-        0
-      );
-      console.log(sumNeg);
+      // const numbersArr = [1, -2, -3, 4, -5, 6, 7, -9, 12, 11];
+      // const sumNeg = numbersArr.reduce(
+      //   (acc, curr) => (curr < 0 ? (acc += curr) : acc),
+      //   0
+      // );
+      // console.log(sumNeg);
 
-      const letters = ["a", "l", "p", "h", "a", "b", "e", "t"];
-      const word = letters.reduce((acc, curr) => (acc = acc + curr), "");
-      console.log(word)
+      // const letters = ["a", "l", "p", "h", "a", "b", "e", "t"];
+      // const word = letters.reduce((acc, curr) => (acc = acc + curr), "");
+      // console.log(word)
 
       // const allNumsArr = [1, 2, -3, 4, 5, -6, 7, -8, -9, 12];
       // const countAll = allNumsArr.reduce(
@@ -593,231 +824,6 @@
       // const flags = [true, true, false];
       // const flagsResult = flags.reduce((acc, curr) => acc && curr, true);
       // console.log("flagsResult", flagsResult);
-
-      // const words = ["car", "bicycle", "airplane", "bus"];
-      // const wordsResult = words.reduce((acc, curr) => {
-      //   curr.length > acc.length ? (acc = curr) : acc;
-      //   return acc;
-      // }, "");
-      // console.log("wordsResult", wordsResult);
-
-      // const arr = [{ a: 1 }, { b: 2 }, { c: 3 }];
-      // const arrResult = arr.reduce((acc, curr) => {
-      //   acc = { ...acc, ...curr };
-      //   return acc;
-      // }, {});
-      // console.log("arrResult", arrResult);
-
-      // const sentence = "Hello World";
-      // const sentenseResult = sentence
-      //   .split("")
-      //   .filter((char) => char !== " ")
-      //   .reduce((acc, curr) => {
-      //     acc[curr] = acc[curr] ? acc[curr] + 1 : 1;
-      //     return acc;
-      //   }, {});
-      // console.log("sentenseResult", sentenseResult);
-
-      // const animals = ["ant", "bear", "cat", "dog", "donkey"];
-      // const animalsResult = animals.reduce((acc, curr) => {
-      //   const firstLetter = curr[0];
-      //   if (!acc[firstLetter]) {
-      //     acc[firstLetter] = [];
-      //   }
-      //   acc[firstLetter].push(curr);
-      //   return acc;
-      // }, {});
-      // console.log("animalsResult", animalsResult);
-
-      // const numbers = [1, 2, 3, 4, 5, 6];
-      // const numbersResult = numbers.reduce((acc, curr) => {
-      //   let odd = 0;
-      //   let even = 0;
-      //   if (curr % 2 == 0) {
-      //     even++;
-      //     acc["even"] = (acc["even"] || 0) + 1;
-      //   } else {
-      //     odd++;
-      //     acc["odd"] = (acc["odd"] || 0) + 1;
-      //   }
-      //   return acc;
-      // }, {});
-      // console.log("numbersResult", numbersResult);
-
-      // const pairs = [
-      //   ["name", "Alice"],
-      //   ["age", 25],
-      //   ["role", "developer"],
-      // ];
-      // const pairsResult = pairs.reduce((acc, curr) => {
-      //   acc[curr[0]] = curr[1];
-      //   return acc;
-      // }, {});
-      // console.log("pairsResult", pairsResult);
-
-      // const users = [
-      //   { name: "Alice", age: 30 },
-      //   { name: "Bob", age: 24 },
-      //   { name: "Charlie", age: 28 },
-      // ];
-
-      // const totalAge = users.reduce((acc, curr) => acc + curr.age, 0);
-      // const averageAge = (totalAge / users.length).toFixed(2);
-
-      // console.log("Average Age:", averageAge);
-
-      // const users2 = [
-      //   { name: "Alice", role: "admin" },
-      //   { name: "Bob", role: "user" },
-      //   { name: "Charlie", role: "admin" },
-      // ];
-
-      // const uniqueRoles = users2.reduce((acc, curr) => {
-      //   if (!acc.includes(curr.role)) {
-      //     acc.push(curr.role);
-      //   }
-      //   return acc;
-      // }, []);
-
-      // console.log("Unique Roles:", uniqueRoles);
-
-      // users2.forEach((user) => {
-      //   console.log(user.role);
-      // });
-
-      // console.log(users2.map((user) => user.role));
-
-      // const name = "raj";
-      // {
-      //   const name = "akash";
-      //   console.log(name);
-      // }
-      // console.log(name);
-
-      // console.log(name2);
-      // var name2 = "raj";
-
-      // printName();
-      // function printName() {
-      //   console.log("raj");
-      // }
-
-      // const printName2 = () => console.log("Akash");
-      // printName2();
-
-      // const obj1 = {
-      //   name: "raj kumar",
-      //   callTeacher: function () {
-      //     console.log(this.name);
-      //   },
-      // };
-
-      // obj1.callTeacher();
-
-      // const user = {
-      //   name: "Emma",
-      //   greet() {
-      //     console.log(`Hello, ${this.name}`);
-      //   },
-      // };
-
-      // const greetUser2 = user.greet;
-      // greetUser2();
-
-      // const person = {
-      //   name: "James",
-      //   logInfo: function () {
-      //     setTimeout(() => {
-      //       console.log(`${this.name}`);
-      //     }, 1000);
-      //   },
-      // };
-
-      // person.logInfo();
-
-      // const greeting = function () {
-      //   console.log(`Hello, ${this.name}`);
-      // };
-
-      // const user1 = { name: "John" };
-      // const user2 = { name: "Jane" };
-
-      // greeting.call(user1);
-      // greeting.call(user2);
-
-      // function displayInfo(age) {
-      //   console.log(`${this.name} is ${age} years old.`);
-      // }
-
-      // const obj2 = { name: "Lucas" };
-      // const obj3 = { name: "Anna" };
-
-      // displayInfo.apply(obj2, [25]);
-      // displayInfo.apply(obj3, [30]);
-
-      // function show() {
-      //   console.log(this);
-      // }
-
-      // show();
-
-      // const obj = {
-      //   count: 0,
-      //   increment: function () {
-      //     setInterval(() => {
-      //       this.count++;
-      //       console.log(this.count);
-      //     }, 1000);
-      //   },
-      // };
-
-      // // obj.increment();
-
-      // function Person(name, age) {
-      //   this.name = name;
-      //   this.age = age;
-      //   this.greet = function () {
-      //     console.log(`Hello, ${this.name}`);
-      //   };
-      // }
-
-      // const person1 = new Person("John", 30);
-      // person1.greet();
-
-      // let promise1 = new Promise((resolve) => {
-      //   setTimeout(() => resolve("First"), 5000);
-      // });
-      // let promise2 = new Promise((resolve) =>
-      //   setTimeout(resolve, 2000, "Second got Error")
-      // );
-      // let promise3 = new Promise((resolve) =>
-      //   setTimeout(resolve, 3000, "Third")
-      // );
-
-      // Promise.all([promise1, promise2, promise3])
-      //   .then((result) => console.log(result))
-      //   .catch((error) => console.error(error));
-
-      // Promise.allSettled([promise1, promise2, promise3]).then((results) => {
-      //   console.log(results);
-      // });
-
-      // let promise4 = new Promise((resolve) =>
-      //   setTimeout(resolve, 1000, "First")
-      // );
-      // let promise5 = new Promise((resolve) =>
-      //   setTimeout(resolve, 2000, "Second")
-      // );
-
-      // Promise.race([promise4, promise5]).then((result) => {
-      //   console.log("race result: ", result);
-      // });
-
-      // const obj5 = { name: "Raj" };
-      // const obj6 = { ...obj5 };
-      // obj6.age = 23;
-      // console.log("Object ", obj5);
-      // console.log("Object ", obj6);
     </script>
   </body>
 </html>

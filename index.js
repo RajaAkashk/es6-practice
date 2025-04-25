@@ -358,9 +358,7 @@ console.log(
 );
 
 const modifyObjectProperties = (obj1, obj2) => ({ ...obj1, ...obj2 });
-console.log(
-  modifyObjectProperties({ name: "Alice", age: 25 }, { age: 30 })
-);
+console.log(modifyObjectProperties({ name: "Alice", age: 25 }, { age: 30 }));
 
 // const sumAndDifference = (arr) => {
 //   const [a, b] = arr;
@@ -644,466 +642,691 @@ generateBtn.addEventListener("click", generateMultiples);
 // };
 // printFruitsAndVegetable()
 
- // const words = ["apple", "banana", "kiwi", "orange", "grape"];
-      // const printWords = () => {
-      //   return words.map((word) => word.length);
-      // };
-      // console.log(printWords());
-
-      // const numbers = [1, 2, 3, 4, 5];
-      // const printNumbers = () => numbers.map((num) => num * num);
-      // console.log(printNumbers());
-      // var x;
-      // console.log(x);
-      // x = "raja";
-
-      // abc();
-      // function abc() {
-      //   console.log("raja");
-      // }
-
-      // def();
-      // def();
-      // var def;
-      // def();
-      // const def = () => {
-      // console.log("akash");
-      // };
-      // var def = () => {
-      // console.log("akash");
-      // };
-
-      // let def = () => {
-      //   console.log("akash");
-      // };
-
-      // outerFunction();
-      // outerFunction();
-      // outerFunction();
-
-      // function outerFunction() {
-      //   let count = 0;
-      //   function innerFunction() {
-      //     count++;
-      //     console.log(count);
-      //   }
-      //   return innerFunction();
-      // }
-
-      // Promises in js is an object which represent eventual completion of a async process
-
-      //1
-      // console.log("1");
-      // console.log("A");
-
-      // setTimeout(() => {
-      //   console.log("B");
-      // }, 100);
-
-      // setTimeout(() => {
-      //   console.log("C");
-      // }, 0);
-      // console.log("D");
-
-      //2
-      // console.log("script start");
-      // setTimeout(() => {
-      //   console.log("timeout 1");
-      // }, 100);
-      // Promise.resolve().then(() => {
-      //   console.log("promise 1");
-      // });
-      // setTimeout(() => {
-      //   console.log("timeout 2");
-      // }, 50);
-      // console.log("script end");
-
-      // // script Start
-      // // p1
-      // // script end
-      // // t2
-      // // t1
-
-      // async function run() {
-      //   console.log("1");
-      //   console.log("2");
-      // }
-      // setTimeout(() => {
-      //   console.log("3");
-      // }, 50);
-      // run();
-      // console.log("4");
-
-      // // 4
-      // // 1
-      // // 2
-      // // 3
-
-      // console.log("A"); // sync
-
-      // setTimeout(() => {
-      //   console.log("B"); // macro task
-
-      //   Promise.resolve().then(() => {
-      //     console.log("C");
-      //   }); // micro task
-      // }, 100);
+// const words = ["apple", "banana", "kiwi", "orange", "grape"];
+// const printWords = () => {
+//   return words.map((word) => word.length);
+// };
+// console.log(printWords());
+
+// const numbers = [1, 2, 3, 4, 5];
+// const printNumbers = () => numbers.map((num) => num * num);
+// console.log(printNumbers());
+// var x;
+// console.log(x);
+// x = "raja";
+
+// abc();
+// function abc() {
+//   console.log("raja");
+// }
+
+// def();
+// def();
+// var def;
+// def();
+// const def = () => {
+// console.log("akash");
+// };
+// var def = () => {
+// console.log("akash");
+// };
+
+// let def = () => {
+//   console.log("akash");
+// };
+
+// outerFunction();
+// outerFunction();
+// outerFunction();
+
+// function outerFunction() {
+//   let count = 0;
+//   function innerFunction() {
+//     count++;
+//     console.log(count);
+//   }
+//   return innerFunction();
+// }
+
+// Promises in js is an object which represent eventual completion of a async process
+
+//1
+// console.log("1");
+// console.log("A");
+
+// setTimeout(() => {
+//   console.log("B");
+// }, 100);
+
+// setTimeout(() => {
+//   console.log("C");
+// }, 0);
+// console.log("D");
+
+//2
+// console.log("script start");
+// setTimeout(() => {
+//   console.log("timeout 1");
+// }, 100);
+// Promise.resolve().then(() => {
+//   console.log("promise 1");
+// });
+// setTimeout(() => {
+//   console.log("timeout 2");
+// }, 50);
+// console.log("script end");
+
+// // script Start
+// // p1
+// // script end
+// // t2
+// // t1
+
+// async function run() {
+//   console.log("1");
+//   console.log("2");
+// }
+// setTimeout(() => {
+//   console.log("3");
+// }, 50);
+// run();
+// console.log("4");
+
+// // 4
+// // 1
+// // 2
+// // 3
+
+// console.log("A"); // sync
+
+// setTimeout(() => {
+//   console.log("B"); // macro task
+
+//   Promise.resolve().then(() => {
+//     console.log("C");
+//   }); // micro task
+// }, 100);
 
-      // Promise.resolve().then(() => {
-      //   console.log("D"); // micro task
-      // });
+// Promise.resolve().then(() => {
+//   console.log("D"); // micro task
+// });
 
-      // console.log("E"); // sync code
+// console.log("E"); // sync code
 
-      // // A;
-      // // E;
-      // // D;
-      // // B;
-      // // C;
+// // A;
+// // E;
+// // D;
+// // B;
+// // C;
 
-      // console.log("start");
+// console.log("start");
 
-      // setTimeout(() => {
-      //   console.log("timeout 1");
-      // }, 0);
+// setTimeout(() => {
+//   console.log("timeout 1");
+// }, 0);
 
-      // Promise.resolve().then(() => {
-      //   console.log("promise 1");
-      // });
+// Promise.resolve().then(() => {
+//   console.log("promise 1");
+// });
 
-      // async function asyncFunc() {
-      //   console.log("async start");
-      //   await Promise.resolve();
-      //   console.log("async end");
-      // }
+// async function asyncFunc() {
+//   console.log("async start");
+//   await Promise.resolve();
+//   console.log("async end");
+// }
 
-      // asyncFunc();
+// asyncFunc();
 
-      // setTimeout(() => {
-      //   console.log("timeout 2");
-      // }, 0);
+// setTimeout(() => {
+//   console.log("timeout 2");
+// }, 0);
 
-      // console.log("end");
+// console.log("end");
 
-      // //       start
-      // // async start
-      // // end
-      // // promise 1
-      // // async end
-      // // timeout 1
-      // // timeout 2
+// //       start
+// // async start
+// // end
+// // promise 1
+// // async end
+// // timeout 1
+// // timeout 2
 
-      // console.log("A");
+// console.log("A");
 
-      // setTimeout(() => {
-      //   console.log("B");
+// setTimeout(() => {
+//   console.log("B");
 
-      //   Promise.resolve().then(() => {
-      //     console.log("C");
-      //   });
-      // }, 10);
+//   Promise.resolve().then(() => {
+//     console.log("C");
+//   });
+// }, 10);
 
-      // queueMicrotask(() => {
-      //   console.log("D");
-      // });
+// queueMicrotask(() => {
+//   console.log("D");
+// });
 
-      // Promise.resolve().then(() => {
-      //   console.log("E");
-      // });
+// Promise.resolve().then(() => {
+//   console.log("E");
+// });
 
-      // setTimeout(() => {
-      //   console.log("F");
-      // }, 0);
-
-      // console.log("G");
+// setTimeout(() => {
+//   console.log("F");
+// }, 0);
+
+// console.log("G");
 
-      // // A;
-      // // G;
-      // // D;
-      // // E;
-
-      // console.log(foo());
-      // function foo() {
-      //   return "hello";
-      // }
-
-      // console.log(bar());
-      // var bar = function () {
-      //   return "hi";
-      // };
-
-      // // "hello"
-      // // ReferenceError
-
-      // console.log(typeof null);
-      // // Q1.2: Which of the following is a primitive data type in JavaScript?
-
-      // // 2. Variables
-      // // Q2.1: What will this code log?
-
-      // console.log(x);
-      // var x = 5;
-
-      // // Q2.2: Which variable declaration is block scoped and cannot be re-assigned?
-
-      // // 3. Operators
-      // // Q3.1: What is the result of 2 + "2" in JavaScript?
-
-      // // Q3.2: What will the following expression return?
-
-      // (true && false) || true;
-
-      // // 4. Conditionals
-      // // Q4.1: Fill in the blank: The switch statement compares values using the _______ operator.
-
-      // // Q4.2: What will be printed?
-
-      // let score = 85;
-      // let grade = score > 90 ? "A" : "B";
-      // console.log(grade);
-
-      // // 5. Loops
-      // // Q5.1: Which loop is guaranteed to run at least once, even if the condition is false?
-
-      // // Q5.2: What will this code output?
-
-      // const obj = { a: 1, b: 2 };
-      // for (let key in obj) {
-      //   console.log(key);
-      // }
-
-      // // Q5.3: What will be logged?
-      // const arr = [10, 20, 30];
-      // for (let value of arr) {
-      //   console.log(value);
-      // }
-
-      // // What will this code log?
-      // for (let i = 0; i < 3; i++) {
-      //   console.log("Loop:", i);
-      // }
-      // //  Loop: 0 Loop: 1 Loop: 2
-
-      // let i = 3;
-      // while (i > 0) {
-      //   console.log(i);
-      //   i--;
-      // }
-      // //3 2 1
-
-      // let count = 0;
-      // do {
-      //   count++;
-      // } while (count < 1);
-      // console.log(count);
-      // //0
-
-      // const obj2 = { x: 1, y: 2 };
-      // for (let key in obj2) {
-      //   console.log(`${key}: ${obj2[key]}`);
-      // }
-      // //. x: 1 y: 2
-
-      // const fruits = ["apple", "banana", "cherry"];
-      // for (let fruit of fruits) {
-      //   console.log(fruit);
-      // }
-
-      // let str = "JS";
-      // for (let char of str) {
-      //   console.log(char);
-      // }
-      // // J S (on separate lines)
-
-      // for (let i = 0; i < 5; i++) {
-      //   if (i === 3) break;
-      //   console.log(i);
-      // }
-      // // 0 1 2
-
-      // let sum = 0;
-      // for (let i = 1; i <= 4; i++) {
-      //   sum += i;
-      // }
-      // console.log(sum);
-      // // 10
-
-      // const nums = [10, 20, 30];
-      // for (let index in nums) {
-      //   console.log(index);
-      // }
-      // 10 20 30
-
-      // function outer() {
-      //   let x = 10;
-      //   return function inner() {
-      //     console.log(x);
-      //   };
-      // }
-      // const fn = outer();
-      // fn();
-      // //10
-
-      // console.log(a); // undefined
-      // var a = 5;
-
-      // console.log(b); // ReferenceError
-      // let b = 10;
-
-      greet();
-      function greet() {
-        console.log("Hello!");
-      }
-
-      sayHi();
-      const sayHi = () => {
-        console.log("Hi");
-      };
-
-      let count = 0;
-      (function () {
-        count++;
-        console.log(count);
-      })();
-
-      const obj = {
-        name: "JS",
-        print: function () {
-          console.log(this.name);
-        },
-      };
-      obj.print();
-
-      const arr = [10, 20, 30];
-      const [a, , b] = arr;
-      console.log(a, b);
-      // 10 20
-
-      const person = {
-        name: "Raja",
-        age: 21,
-      };
-
-      const updated = { ...person, age: 22 };
-      console.log(updated.age);
-      //22
-
-      function sum(...nums) {
-        return nums.reduce((acc, cur) => acc + cur, 0);
-      }
-
-      sum(5, 10, 15);
-      //30
-
-      // const user = {
-      //   name: "Akash",
-      //   greet() {
-      //     return `Hello, ${this.name}`;
-      //   },
-      // };
-
-      // const greetFn = user.greet;
-      // console.log(greetFn());
-      // //Error
-
-      // const nums = [1, 2, 3];
-      // const doubled = nums.map((n) => n * 2);
-      // console.log(doubled);
-      // //2,4,6
-
-      // const data = {
-      //   items: ["pen", "book"],
-      //   printItems() {
-      //     this.items.forEach(function (item) {
-      //       console.log(this, item);
-      //     });
-      //   },
-      // };
-
-      // data.printItems();
-      // //Error
-
-      // function multiplyBy(n) {
-      //   return function (x) {
-      //     return x * n;
-      //   };
-      // }
-
-      // const double = multiplyBy(2);
-      // console.log(double(5));
-
-      // (function (num) {
-      //   console.log(num * 2);
-      // })(4);
-      // //8
-
-      // var x = 5;
-
-      // function test() {
-      //   var x = 10;
-      //   console.log(x);
-      // }
-      // test();
-      // console.log(x);
-      // // 10 5
-
-      // {
-      //   let x = 10;
-      // }
-      // console.log(x);
-      // //error
-
-      // function outer() {
-      //   let count = 0;
-      //   return function () {
-      //     count++;
-      //     return count;
-      //   };
-      // }
-
-      // const counter = outer();
-      // console.log(counter());
-      // console.log(counter());
-      // // 1 2
-
-      // const obj = {
-      //   name: "Raja",
-      //   show: function () {
-      //     console.log(this.name);
-      //   },
-      // };
-      // obj.show();
-      // //Raja
-
-      // const person2 = {
-      //   age: 25,
-      //   getAge: () => {
-      //     console.log(this.age);
-      //   },
-      // };
-      // person2.getAge();
-      // // error
-
-      // const user2 = {
-      //   name: "Akash",
-      //   greet() {
-      //     setTimeout(() => {
-      //       console.log("Hello " + this.name);
-      //     }, 1000);
-      //   },
-      // };
-      // user2.greet();
-
-      // const createCounter = (step) => {
-      //   let count = 0;
-      //   return function () {
-      //     count += step;
-      //     console.log(count);
-      //   };
-      // };
-
-      // const counter2 = createCounter(5);
-      // counter2();
-      // counter2();
-      // counter2();
-      // console.log(this);
+// // A;
+// // G;
+// // D;
+// // E;
+
+// console.log(foo());
+// function foo() {
+//   return "hello";
+// }
+
+// console.log(bar());
+// var bar = function () {
+//   return "hi";
+// };
+
+// // "hello"
+// // ReferenceError
+
+// console.log(typeof null);
+// // Q1.2: Which of the following is a primitive data type in JavaScript?
+
+// // 2. Variables
+// // Q2.1: What will this code log?
+
+// console.log(x);
+// var x = 5;
+
+// // Q2.2: Which variable declaration is block scoped and cannot be re-assigned?
+
+// // 3. Operators
+// // Q3.1: What is the result of 2 + "2" in JavaScript?
+
+// // Q3.2: What will the following expression return?
+
+// (true && false) || true;
+
+// // 4. Conditionals
+// // Q4.1: Fill in the blank: The switch statement compares values using the _______ operator.
+
+// // Q4.2: What will be printed?
+
+// let score = 85;
+// let grade = score > 90 ? "A" : "B";
+// console.log(grade);
+
+// // 5. Loops
+// // Q5.1: Which loop is guaranteed to run at least once, even if the condition is false?
+
+// // Q5.2: What will this code output?
+
+// const obj = { a: 1, b: 2 };
+// for (let key in obj) {
+//   console.log(key);
+// }
+
+// // Q5.3: What will be logged?
+// const arr = [10, 20, 30];
+// for (let value of arr) {
+//   console.log(value);
+// }
+
+// // What will this code log?
+// for (let i = 0; i < 3; i++) {
+//   console.log("Loop:", i);
+// }
+// //  Loop: 0 Loop: 1 Loop: 2
+
+// let i = 3;
+// while (i > 0) {
+//   console.log(i);
+//   i--;
+// }
+// //3 2 1
+
+// let count = 0;
+// do {
+//   count++;
+// } while (count < 1);
+// console.log(count);
+// //0
+
+// const obj2 = { x: 1, y: 2 };
+// for (let key in obj2) {
+//   console.log(`${key}: ${obj2[key]}`);
+// }
+// //. x: 1 y: 2
+
+// const fruits = ["apple", "banana", "cherry"];
+// for (let fruit of fruits) {
+//   console.log(fruit);
+// }
+
+// let str = "JS";
+// for (let char of str) {
+//   console.log(char);
+// }
+// // J S (on separate lines)
+
+// for (let i = 0; i < 5; i++) {
+//   if (i === 3) break;
+//   console.log(i);
+// }
+// // 0 1 2
+
+// let sum = 0;
+// for (let i = 1; i <= 4; i++) {
+//   sum += i;
+// }
+// console.log(sum);
+// // 10
+
+// const nums = [10, 20, 30];
+// for (let index in nums) {
+//   console.log(index);
+// }
+// 10 20 30
+
+// function outer() {
+//   let x = 10;
+//   return function inner() {
+//     console.log(x);
+//   };
+// }
+// const fn = outer();
+// fn();
+// //10
+
+// console.log(a); // undefined
+// var a = 5;
+
+// console.log(b); // ReferenceError
+// let b = 10;
+
+greet();
+function greet() {
+  console.log("Hello!");
+}
+
+sayHi();
+const sayHi = () => {
+  console.log("Hi");
+};
+
+let count = 0;
+(function () {
+  count++;
+  console.log(count);
+})();
+
+const obj = {
+  name: "JS",
+  print: function () {
+    console.log(this.name);
+  },
+};
+obj.print();
+
+const arr = [10, 20, 30];
+const [a, , b] = arr;
+console.log(a, b);
+// 10 20
+
+const person = {
+  name: "Raja",
+  age: 21,
+};
+
+const updated = { ...person, age: 22 };
+console.log(updated.age);
+//22
+
+function sum(...nums) {
+  return nums.reduce((acc, cur) => acc + cur, 0);
+}
+
+sum(5, 10, 15);
+//30
+
+// const user = {
+//   name: "Akash",
+//   greet() {
+//     return `Hello, ${this.name}`;
+//   },
+// };
+
+// const greetFn = user.greet;
+// console.log(greetFn());
+// //Error
+
+// const nums = [1, 2, 3];
+// const doubled = nums.map((n) => n * 2);
+// console.log(doubled);
+// //2,4,6
+
+// const data = {
+//   items: ["pen", "book"],
+//   printItems() {
+//     this.items.forEach(function (item) {
+//       console.log(this, item);
+//     });
+//   },
+// };
+
+// data.printItems();
+// //Error
+
+// function multiplyBy(n) {
+//   return function (x) {
+//     return x * n;
+//   };
+// }
+
+// const double = multiplyBy(2);
+// console.log(double(5));
+
+// (function (num) {
+//   console.log(num * 2);
+// })(4);
+// //8
+
+// var x = 5;
+
+// function test() {
+//   var x = 10;
+//   console.log(x);
+// }
+// test();
+// console.log(x);
+// // 10 5
+
+// {
+//   let x = 10;
+// }
+// console.log(x);
+// //error
+
+// function outer() {
+//   let count = 0;
+//   return function () {
+//     count++;
+//     return count;
+//   };
+// }
+
+// const counter = outer();
+// console.log(counter());
+// console.log(counter());
+// // 1 2
+
+// const obj = {
+//   name: "Raja",
+//   show: function () {
+//     console.log(this.name);
+//   },
+// };
+// obj.show();
+// //Raja
+
+// const person2 = {
+//   age: 25,
+//   getAge: () => {
+//     console.log(this.age);
+//   },
+// };
+// person2.getAge();
+// // error
+
+// const user2 = {
+//   name: "Akash",
+//   greet() {
+//     setTimeout(() => {
+//       console.log("Hello " + this.name);
+//     }, 1000);
+//   },
+// };
+// user2.greet();
+
+// const createCounter = (step) => {
+//   let count = 0;
+//   return function () {
+//     count += step;
+//     console.log(count);
+//   };
+// };
+
+// const counter2 = createCounter(5);
+// counter2();
+// counter2();
+// counter2();
+// console.log(this);
+
+// const words = ["car", "bicycle", "airplane", "bus"];
+// const wordsResult = words.reduce((acc, curr) => {
+//   curr.length > acc.length ? (acc = curr) : acc;
+//   return acc;
+// }, "");
+// console.log("wordsResult", wordsResult);
+
+// const arr = [{ a: 1 }, { b: 2 }, { c: 3 }];
+// const arrResult = arr.reduce((acc, curr) => {
+//   acc = { ...acc, ...curr };
+//   return acc;
+// }, {});
+// console.log("arrResult", arrResult);
+
+// const sentence = "Hello World";
+// const sentenseResult = sentence
+//   .split("")
+//   .filter((char) => char !== " ")
+//   .reduce((acc, curr) => {
+//     acc[curr] = acc[curr] ? acc[curr] + 1 : 1;
+//     return acc;
+//   }, {});
+// console.log("sentenseResult", sentenseResult);
+
+// const animals = ["ant", "bear", "cat", "dog", "donkey"];
+// const animalsResult = animals.reduce((acc, curr) => {
+//   const firstLetter = curr[0];
+//   if (!acc[firstLetter]) {
+//     acc[firstLetter] = [];
+//   }
+//   acc[firstLetter].push(curr);
+//   return acc;
+// }, {});
+// console.log("animalsResult", animalsResult);
+
+// const numbers = [1, 2, 3, 4, 5, 6];
+// const numbersResult = numbers.reduce((acc, curr) => {
+//   let odd = 0;
+//   let even = 0;
+//   if (curr % 2 == 0) {
+//     even++;
+//     acc["even"] = (acc["even"] || 0) + 1;
+//   } else {
+//     odd++;
+//     acc["odd"] = (acc["odd"] || 0) + 1;
+//   }
+//   return acc;
+// }, {});
+// console.log("numbersResult", numbersResult);
+
+// const pairs = [
+//   ["name", "Alice"],
+//   ["age", 25],
+//   ["role", "developer"],
+// ];
+// const pairsResult = pairs.reduce((acc, curr) => {
+//   acc[curr[0]] = curr[1];
+//   return acc;
+// }, {});
+// console.log("pairsResult", pairsResult);
+
+// const users = [
+//   { name: "Alice", age: 30 },
+//   { name: "Bob", age: 24 },
+//   { name: "Charlie", age: 28 },
+// ];
+
+// const totalAge = users.reduce((acc, curr) => acc + curr.age, 0);
+// const averageAge = (totalAge / users.length).toFixed(2);
+
+// console.log("Average Age:", averageAge);
+
+// const users2 = [
+//   { name: "Alice", role: "admin" },
+//   { name: "Bob", role: "user" },
+//   { name: "Charlie", role: "admin" },
+// ];
+
+// const uniqueRoles = users2.reduce((acc, curr) => {
+//   if (!acc.includes(curr.role)) {
+//     acc.push(curr.role);
+//   }
+//   return acc;
+// }, []);
+
+// console.log("Unique Roles:", uniqueRoles);
+
+// users2.forEach((user) => {
+//   console.log(user.role);
+// });
+
+// console.log(users2.map((user) => user.role));
+
+// const name = "raj";
+// {
+//   const name = "akash";
+//   console.log(name);
+// }
+// console.log(name);
+
+// console.log(name2);
+// var name2 = "raj";
+
+// printName();
+// function printName() {
+//   console.log("raj");
+// }
+
+// const printName2 = () => console.log("Akash");
+// printName2();
+
+// const obj1 = {
+//   name: "raj kumar",
+//   callTeacher: function () {
+//     console.log(this.name);
+//   },
+// };
+
+// obj1.callTeacher();
+
+// const user = {
+//   name: "Emma",
+//   greet() {
+//     console.log(`Hello, ${this.name}`);
+//   },
+// };
+
+// const greetUser2 = user.greet;
+// greetUser2();
+
+// const person = {
+//   name: "James",
+//   logInfo: function () {
+//     setTimeout(() => {
+//       console.log(`${this.name}`);
+//     }, 1000);
+//   },
+// };
+
+// person.logInfo();
+
+// const greeting = function () {
+//   console.log(`Hello, ${this.name}`);
+// };
+
+// const user1 = { name: "John" };
+// const user2 = { name: "Jane" };
+
+// greeting.call(user1);
+// greeting.call(user2);
+
+// function displayInfo(age) {
+//   console.log(`${this.name} is ${age} years old.`);
+// }
+
+// const obj2 = { name: "Lucas" };
+// const obj3 = { name: "Anna" };
+
+// displayInfo.apply(obj2, [25]);
+// displayInfo.apply(obj3, [30]);
+
+// function show() {
+//   console.log(this);
+// }
+
+// show();
+
+// const obj = {
+//   count: 0,
+//   increment: function () {
+//     setInterval(() => {
+//       this.count++;
+//       console.log(this.count);
+//     }, 1000);
+//   },
+// };
+
+// // obj.increment();
+
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.greet = function () {
+//     console.log(`Hello, ${this.name}`);
+//   };
+// }
+
+// const person1 = new Person("John", 30);
+// person1.greet();
+
+// let promise1 = new Promise((resolve) => {
+//   setTimeout(() => resolve("First"), 5000);
+// });
+// let promise2 = new Promise((resolve) =>
+//   setTimeout(resolve, 2000, "Second got Error")
+// );
+// let promise3 = new Promise((resolve) =>
+//   setTimeout(resolve, 3000, "Third")
+// );
+
+// Promise.all([promise1, promise2, promise3])
+//   .then((result) => console.log(result))
+//   .catch((error) => console.error(error));
+
+// Promise.allSettled([promise1, promise2, promise3]).then((results) => {
+//   console.log(results);
+// });
+
+// let promise4 = new Promise((resolve) =>
+//   setTimeout(resolve, 1000, "First")
+// );
+// let promise5 = new Promise((resolve) =>
+//   setTimeout(resolve, 2000, "Second")
+// );
+
+// Promise.race([promise4, promise5]).then((result) => {
+//   console.log("race result: ", result);
+// });
+
+// const obj5 = { name: "Raj" };
+// const obj6 = { ...obj5 };
+// obj6.age = 23;
+// console.log("Object ", obj5);
+// console.log("Object ", obj6);
