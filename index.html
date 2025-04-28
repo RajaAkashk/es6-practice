@@ -218,612 +218,336 @@
       }, {});
       console.log(arrResult);
 
-   
-
-      // const data = [
-      //   { key: "item", value: "Pencil" },
-
-      //   { key: "price", value: 250 },
-
-      //   { key: "inStock", value: true },
-      // ];
-      // const oneObj = data.reduce((acc, curr) => {
-      //   acc[curr.key] = curr.value;
-      //   return acc;
-      // }, {});
-      // console.log(oneObj);
-
-      // const students = [
-      //   { item: "Pen", color: "blue" },
-
-      //   { item: "Pen", color: "black" },
-
-      //   { item: "Pen", color: "red" },
-      // ];
-      // const oneObj2 = students.reduce((acc, curr) => {
-      //   acc.push(curr.color);
-      //   return acc;
-      // }, []);
-      // console.log(oneObj2);
-
-      // const countries = [
-      //   { item: "Car", manufacturingCity: "New York" },
-
-      //   { item: "Car", manufacturingCity: "Los Angeles" },
-
-      //   { item: "Car", manufacturingCity: "Chicago" },
-      // ];
-      // const countriesArr = countries.reduce((acc, curr) => {
-      //   acc.push(curr.manufacturingCity);
-      //   return acc;
-      // }, []);
-      // console.log(countriesArr);
-
-      // const groceryItems = [
-      //   { item: "Fruit", name: "Apple" },
-
-      //   { item: "Fruit", name: "Banana" },
-
-      //   { item: "Fruit", name: "Orange" },
-      // ];
-      // const fuitObj = groceryItems.reduce((acc, curr) => {
-      //   acc.push(curr.name);
-      //   return acc;
-      // }, []);
-      // console.log(fuitObj);
-
-      // const details = [
-      //   { key: "category", value: "Electronics" },
-
-      //   { key: "rating", value: 4.5 },
-
-      //   { key: "available", value: true },
-      // ];
-      // const detailsObj = details.reduce((acc, curr) => {
-      //   acc[curr.key] = curr.value;
-      //   return acc;
-      // }, {});
-      // console.log(detailsObj);
-
-      // const productInfo = [
-      //   { key: "name", value: "Laptop" },
-
-      //   { key: "price", value: 12000 },
-
-      //   { key: "brand", value: "Dell" },
-      // ];
-      // const ProductObj = productInfo.reduce((acc, curr) => {
-      //   acc[curr.key] = curr.value;
-      //   return acc;
-      // }, {});
-      // console.log(ProductObj);
-
-      // const colleges = [
-      //   { item: "Book", university: "Harvard" },
-
-      //   { item: "Book", university: "MIT" },
-
-      //   { item: "Book", university: "Stanford" },
-      // ];
-      // const collegesArr = colleges.reduce((acc, curr) => {
-      //   acc.push(curr.university);
-      //   return acc;
-      // }, []);
-      // console.log(collegesArr);
-
-      // const userPreferences = [
-      //   { key: "theme", value: "Dark Mode" },
-
-      //   { key: "fontSize", value: 16 },
-
-      //   { key: "notifications", value: true },
-      // ];
-      // const userPreferencesObj = userPreferences.reduce((acc,curr) => {
-      //   acc[curr.key] = curr.value;
-      //   return acc;
-      // },{})
-      // console.log(userPreferencesObj)
-
-      // const wordsLength = ["apple", "banana", "kiwi", "orange", "grape"];
-      // const totalLength = wordsLength.reduce(
-      //   (acc, curr) => (acc = acc + curr.length),
-      //   0
-      // );
-      // console.log(totalLength);
-
-      // const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-      // const totalEvenNum = nums.reduce(
-      //   (acc, curr) => (curr % 2 === 0 ? (acc += 1) : acc),
-      //   0
-      // );
-      // console.log(totalEvenNum);
-
-      // const wordsCaps = ["hello", "world", "how", "are", "you"];
-      // const capitalize = wordsCaps.reduce((acc, curr) => {
-      //   acc = acc + (curr.slice(0, 1).toUpperCase() + curr.slice(1) + " ");
-      //   return acc;
-      // }, "");
-      // console.log(capitalize);
-
-      // const numsAvg = [10, 15, 20, 25, 30];
-      // const averageNum = numsAvg.reduce((acc, curr) => {
-      //   acc = acc + curr;
-
-      //   return acc;
-      // }, 0);
-      // console.log(averageNum / numsAvg.length);
-
-      // const numbers = [1, 2, 3, 4, 5];
-      // const square = numbers.reduce(
-      //   (acc, curr) => (acc = acc + curr * curr),
-      //   0
-      // );
-      // console.log(square);
-
-      // const stationeryWords = [
-      //   "pen",
-      //   "notebook",
-      //   "eraser",
-      //   "notebook",
-      //   "pencil",
-      //   "notebook",
-      //   "pencil",
-      // ];
-      // const occurance = stationeryWords.reduce((acc, curr) => {
-      //   acc[curr] = (acc[curr] || 0) + 1;
-      //   return acc;
-      // }, {});
-      // console.log(occurance);
-
-      // const wordsLetter = ["apple", "banana", "kiwi", "orange", "grape"];
-      // const wordsKey = wordsLetter.reduce((acc, curr) => {
-      //   acc[curr.slice(0, 1)] = (acc[curr] || 0) + 1;
-      //   return acc;
-      // }, {});
-      // console.log(wordsKey);
-
-      // const numPositive = [-2, 3, 4, -5, 6];
-      // const productOfPositive = numPositive.reduce(
-      //   (acc, curr) => (curr > 0 ? (acc *= curr) : acc),
-      //   1
-      // );
-      // console.log(productOfPositive);
-
-      // const stationeryWords = [
-      //   "pen",
-
-      //   "notebook",
-
-      //   "eraser",
-
-      //   "notebook",
-
-      //   "pencil",
-
-      //   "notebook",
-
-      //   "pencil",
-      // ];
-
-      // const totalLength = stationeryWords.reduce(
-      //   (acc, curr) => (acc = acc + curr.length),
-      //   0
-      // );
-      // console.log(totalLength);
-
-      // const numbersArray = [1, 2, 3, 4, 5, 6];
-      // const sumEven = numbersArray.reduce((acc, curr) => {
-      //   curr % 2 === 0 ? (acc = acc + curr) : acc;
-      //   return acc;
-      // }, 0);
-      // console.log(sumEven);
-
-      // const numsArr = [11, 22, 32, 14, 15, 62, 17, 18, 29, 10];
-      // const oddNum = numsArr.reduce((acc, curr) => {
-      //   curr % 2 !== 0 ? acc++ : acc;
-      //   return acc;
-      // }, 0);
-
-      // console.log(oddNum);
-
-      // const allNumns = [1, 2, -3, 4, 5, -6, 7, -8, -9, 12];
-      // const numAll = allNumns.reduce(
-      //   (acc, curr) => {
-      //     curr > 0 ? acc.pos.push(curr) : acc.neg.push(curr);
-      //     return acc;
-      //   },
-      //   { pos: [], neg: [] }
-      // );
-      // console.log(numAll);
-
-      // const numAll2 = allNumns.reduce(
-      //   (acc, curr) => {
-      //     curr > 0 ? (acc.pos += 1) : (acc.neg += 1);
-      //     return acc;
-      //   },
-      //   { pos: 0, neg: 0 }
-      // );
-      // console.log(numAll2);
-
-      // const wordsCaps = [
-      //   "reduce",
-      //   "method",
-      //   "needs",
-      //   "a",
-      //   "lot",
-      //   "of",
-      //   "practice",
-      // ];
-      // const addWords = wordsCaps.reduce((acc, curr) => {
-      //   acc = acc + curr.toUpperCase() + " ";
-      //   return acc;
-      // }, "");
-      // console.log(addWords);
-
-      // const allNumsArr = [1, 2, -3, 4, 5, -6, 7, -8, -9, 12];
-      // const numArrCount = allNumsArr.reduce(
-      //   (acc, curr) => {
-      //     curr > 0 && curr % 2 === 0
-      //       ? acc.posEven.push(curr)
-      //       : acc.others.push(curr);
-      //     return acc;
-      //   },
-      //   { posEven: [], others: [] }
-      // );
-      // console.log(numArrCount);
-
-      // const numArrCount2 = allNumsArr.reduce(
-      //   (acc, curr) => {
-      //     curr > 0 && curr % 2 === 0 ? (acc.posEven += 1) : (acc.others += 1);
-      //     return acc;
-      //   },
-      //   { posEven: 0, others: 0 }
-      // );
-      // console.log(numArrCount2);
-
-      // const numbersArr = [1, -2, -3, 4, -5, 6, 7, -9, 12, 11];
-      // const sumNeg = numbersArr.reduce(
-      //   (acc, curr) => (curr < 0 ? (acc += curr) : acc),
-      //   0
-      // );
-      // console.log(sumNeg);
-
-      // const letters = ["a", "l", "p", "h", "a", "b", "e", "t"];
-      // const word = letters.reduce((acc, curr) => (acc = acc + curr), "");
-      // console.log(word)
-
-      // const allNumsArr = [1, 2, -3, 4, 5, -6, 7, -8, -9, 12];
-      // const countAll = allNumsArr.reduce(
-      //   (acc, curr) => {
-      //     curr > 0 && curr % 2 === 0 ? (acc.posEven += 1) : (acc.others += 1);
-      //     return acc;
-      //   },
-
-      //   { posEven: 0, others: 0 }
-      // );
-      // console.log(countAll);
-
-      // const products = [
-      //   { name: "Shirt", price: 20 },
-      //   { name: "Jeans", price: 40 },
-      //   { name: "Hat", price: 10 },
-      // ];
-
-      // const total = products.reduce((acc, curr) => {
-      //   acc = acc + curr.price;
-      //   return acc;
-      // }, 0);
-      // console.log(total);
-
-      // const words = ["sun", "elephant", "car", "bicycle"];
-      // const longestWorld = words.reduce((acc, curr) => {
-      //   curr.length > acc.length ? (acc = curr) : acc;
-      //   return acc;
-      // }, "");
-      // console.log(longestWorld);
-
-      // console.log(numResult);
-
-      // const people = [
-      //   { id: 101, name: "Raj" },
-      //   { id: 102, name: "Simran" },
-      // ];
-      // const convert = people.reduce((acc, curr) => {
-      //   acc[curr.id] = curr.name;
-      //   return acc;
-      // }, {});
-      // console.log(convert);
-
-      // const str = "hello";
-      // const strValue = str.split("");
-      // console.log(
-      //   strValue.reduce((acc, curr) => {
-      //     acc[curr] = (acc[curr] || 0) + 1;
-      //     return acc;
-      //   }, {})
-      // );
-
-      // const nums = [1, 2, 3, 4, 5, 6];
-      // const numResult = nums.reduce(
-      //   (acc, curr) => {
-      //     let key = curr % 2 === 0 ? "even" : "odd";
-      //     acc[key].push(curr);
-      //     return acc;
-      //   },
-      //   { even: [], odd: [] }
-      // );
-      // console.log(numResult);
-
-      // const numbers = [3, -2, 7, -5, -1, 4];
-      // const group = numbers.reduce(
-      //   (acc, curr) => {
-      //     const key = curr > 0 ? "Positive" : "Negative";
-      //     acc[key].push(curr);
-      //     return acc;
-      //   },
-      //   { Positive: [], Negative: [] }
-      // );
-      // console.log(group);
-
-      // const sentence = "code and code and learn";
-      // const sentenceSplit = sentence.split(" ");
-      // const sentenceValue = sentenceSplit.reduce((acc, curr) => {
-      //   acc[curr] = (acc[curr] || 0) + 1;
-      //   return acc;
-      // }, {});
-      // console.log(sentenceValue);
-
-      // const students = [
-      //   { name: "Arun", grade: "A" },
-      //   { name: "Meena", grade: "B" },
-      //   { name: "Kiran", grade: "A" },
-      //   { name: "Ravi", grade: "C" },
-      // ];
-      // const gradeStudent = students.reduce(
-      //   (acc, curr) => {
-      //     let key;
-      //     if (curr.grade === "A") {
-      //       key = "A";
-      //     } else if (curr.grade === "B") {
-      //       key = "B";
-      //     } else {
-      //       key = "C";
-      //     }
-      //     acc[key].push(curr.name);
-      //     return acc;
-      //   },
-      //   { A: [], B: [], C: [] }
-      // );
-      // console.log(gradeStudent);
-
-      // const digits = [1, 2, 3, 2, 1, 4, 2];
-      // const countDigit = digits.reduce((acc, curr) => {
-      //   acc[curr] = (acc[curr] || 0) + 1;
-      //   return acc;
-      // }, {});
-      // console.log(countDigit);
-
-      // const fruits = ["apple", "banana", "apricot", "blueberry", "cherry"];
-      // const fruitsGroup = fruits.reduce((acc, curr) => {
-      //   let key = curr[0];
-      //   if (!acc[key]) acc[key] = [];
-      //   acc[key].push(curr);
-      //   return acc;
-      // }, {});
-      // console.log(fruitsGroup);
-
-      // function show() {
-      //   console.log(this);
-      // }
-      // show();
-
-      // function person(name) {
-      //   this.name = name;
-      // }
-
-      // const user = {
-      //   name: "Akash",
-      //   greet: () => {
-      //     console.log(this.name);
-      //   },
-      // };
-      // user.greet();
-
-      // const p1 = new person("Akash");
-      // console.log(p1.name);
-
-      // function Person(name, age) {
-      //   this.sname = name;
-      //   this.age = age;
-      // }
-
-      // const person3 = new Person("Raj", 23);
-      // console.log("person 3", person3);
-
-      // class Personal {
-      //   constructor(name, age) {
-      //     this.name = name;
-      //     this.age = age;
+      const words = [
+        "apple",
+        "banana",
+        "kiwi",
+        "grape",
+        "pear",
+        "orange",
+        "strawberry",
+      ];
+      const filterWord = words.filter(
+        (word) => word.length > 5 && word.includes("a")
+      );
+      console.log(filterWord);
+
+      const books = [
+        {
+          title: "Harry Potter and the Sorcerer's Stone",
+          author: "J.K. Rowling",
+          genre: "Fantasy",
+        },
+
+        { title: "The Hobbit", author: "J.R.R. Tolkien", genre: "Fantasy" },
+
+        {
+          title: "To Kill a Mockingbird",
+          author: "Harper Lee",
+          genre: "Drama",
+        },
+
+        { title: "Dune", author: "Frank Herbert", genre: "Science Fiction" },
+      ];
+
+      const genreFilter = books.filter((book) => book.genre === "Fantasy");
+      console.log(genreFilter);
+
+      const restaurants = [
+        {
+          name: "Pasta Paradise",
+          stars: 4.5,
+          cuisine: "Italian",
+          openOnSundays: false,
+        },
+
+        {
+          name: "Sushi Sensation",
+          stars: 3.8,
+          cuisine: "Japanese",
+          openOnSundays: true,
+        },
+
+        {
+          name: "Burger Binge",
+          stars: 4.2,
+          cuisine: "American",
+          openOnSundays: true,
+        },
+
+        { name: "Nasi", stars: 4.5, cuisine: "Italian", openOnSundays: true },
+      ];
+      const restaurantFilter = restaurants.filter(
+        (restaurant) =>
+          restaurant.stars > 4 &&
+          restaurant.cuisine === "Italian" &&
+          restaurant.openOnSundays === true
+      );
+      console.log(restaurantFilter);
+
+      const products2 = [
+        { name: "Bread", price: 480, quantity: 3 },
+
+        { name: "Clips", price: 200, quantity: 5 },
+
+        { name: "green Bread Knife", price: 3077, quantity: 1 },
+
+        { name: "Slipper", price: 150, quantity: 2 },
+      ];
+
+      const newProductArr = products2
+        .filter((product) => product.name.includes("Bread"))
+        .map((product) => product.name);
+      console.log(newProductArr);
+
+      const employees = [
+        { name: "David", salary: 60000 },
+
+        { name: "Emma", salary: 75000 },
+
+        { name: "Alex", salary: 90000 },
+
+        { name: "Sophie", salary: 55000 },
+      ];
+
+      const employeesTotalSalaray = employees.reduce((acc, curr) => {
+        acc = acc + curr.salary;
+        return acc;
+      }, 0);
+      const employeesAverageSalaray = employeesTotalSalaray / employees.length;
+      console.log(employeesAverageSalaray);
+
+      const newEmployees = employees.map((employee) => {
+        employee["IsAbloveAverage"] =
+          employee.salary > employeesAverageSalaray ? true : false;
+        return employee;
+      });
+      console.log(newEmployees);
+
+      const community = [
+        { name: "Raju", role: "student", hours: [1, 2, 3, 1, 2, 3, 0] },
+
+        { name: "Aakash", role: "mentor", hours: [1, 2, 3, 1, 2, 3, 0] },
+
+        { name: "Ramesh", role: "student", hours: [1, 2, 3, 1, 2, 3, 3] },
+
+        { name: "Jiten", role: "TA", hours: [2, 2, 3, 5, 2, 3, 0] },
+
+        { name: "Harsh", role: "student", hours: [1, 7, 3, 2, 2, 3, 0] },
+
+        { name: "Akshay", role: "student", hours: [1, 6, 3, 1, 2, 3, 0] },
+
+        { name: "Rohan", role: "mentor", hours: [1, 2, 3, 12, 2, 3, 0] },
+
+        { name: "Mohan", role: "student", hours: [1, 8, 3, 0, 2, 3, 0] },
+      ];
+
+      const communityResult = community.reduce((acc, curr) => {
+        const mostHours = acc.hours.reduce(
+          (acc, curr) => (acc = acc + curr),
+          0
+        );
+        const currentHour = curr.hours.reduce(
+          (acc, curr) => (acc = acc + curr),
+          0
+        );
+        return mostHours > currentHour ? acc : curr;
+      });
+      console.log(communityResult);
+
+      const communityData = [
+        { name: "Raju", role: "student", hours: [1, 2, 3, 1, 2, 3, 0] },
+
+        { name: "Aakash", role: "mentor", hours: [1, 2, 3, 4, 5, 6, 7] },
+
+        { name: "Ramesh", role: "student", hours: [4, 5, 6, 4, 5, 6, 0] },
+
+        { name: "Jiten", role: "TA", hours: [2, 2, 3, 5, 2, 3, 0] },
+
+        { name: "Harsh", role: "student", hours: [7, 8, 9, 7, 8, 9, 0] },
+
+        { name: "Akshay", role: "student", hours: [1, 3, 5, 7, 9, 0, 2] },
+
+        { name: "Rohan", role: "mentor", hours: [1, 2, 3, 12, 2, 3, 0] },
+
+        { name: "Mohan", role: "student", hours: [4, 6, 8, 0, 1, 9, 2] },
+      ];
+
+      // const communityDataResult = communityData.map((person) => {
+      //   const totalHours = person.hours.reduce((sum, h) => sum + h, 0);
+
+      //   if (person.role === "student" && totalHours > 20) {
+      //     return { ...person, tag: "regular" };
       //   }
 
-      //   greet() {
-      //     console.log(`hello, this is ${this.name}`);
+      //   return person;
+      // });
+
+      // most hour
+      const communityDataResult = communityData.reduce((acc, curr) => {
+        const highestHour = acc.hours.reduce(
+          (acc, curr) => (acc = acc + curr),
+          0
+        );
+        const currentHour = acc.hours.reduce(
+          (acc, curr) => (acc = acc + curr),
+          0
+        );
+
+        return highestHour > currentHour ? acc : curr;
+      });
+      console.log("communityDataResult", communityDataResult);
+
+      const communityDataResult2 = communityData.map((data) => {
+        const totalHours = data.hours.reduce(
+          (acc, curr) => (acc = acc + curr),
+          0
+        );
+
+        if (data.role === "student" && totalHours > 20) {
+          return { ...data, tag: "regular" };
+        }
+        return data;
+      });
+      console.log("communityDataResult2", communityDataResult2);
+
+      const checkNum = (a, b) => a / b;
+      console.log(checkNum(4, 2));
+
+      const reverseStr = (str) => {
+        let reverse = "";
+        for (let i = str.length - 1; i >= 0; i--) {
+          reverse = reverse + str[i];
+        }
+        return reverse;
+      };
+      console.log(reverseStr("abc"));
+
+      const createObj = (str) => ({
+        length: str.length,
+        uppercase: str.toUpperCase(),
+      });
+      console.log(createObj("Raja"));
+
+      // const calculateAverage = (arr) => {
+      //   let total = 0;
+      //   for (let i = 0; i < arr.length; i++) {
+      //     total = total + arr[i];
       //   }
-      // }
-      // const p4 = new Personal("Shruti", 23);
-      // console.log("p4", p4);
-
-      // function debounce(func, delay) {
-      //   let timer;
-      //   return function (...args) {
-      //     clearTimeout(timer);
-      //     timer = setTimeout(() => func.apply(this, args), delay);
-      //   };
-      // }
-      // const handleSearch = debounce(
-      //   (searchTerm) => console.log(searchTerm),
-      //   1000
-      // );
-
-      // const searchBtn = document.querySelector("#searchBtn");
-
-      // searchBtn.addEventListener("click", () => {
-      //   const search = document.querySelector("#search").value;
-      //   handleSearch(search);
-      // });
-
-      // function debounce(func, delay) {
-      //   let timer;
-      //   return function (...args) {
-      //     clearTimeout(timer);
-      //     timer = setTimeout(() => func.apply(this, args), delay);
-      //   };
-      // }
-
-      // const handleSearch = debounce(
-      //   (searchedValue) => console.log(searchedValue),
-      //   1500
-      // );
-
-      // const searchBtn = document.querySelector("#searchBtn");
-
-      // searchBtn.addEventListener("click", () => {
-      //   const searchInput = document.querySelector("#search").value;
-      //   handleSearch(searchInput);
-      // });
-
-      // function debounce(func, delay) {
-      //   let timer;
-      //   return function (...args) {
-      //     clearTimeout(timer);
-      //     timer = setTimeout(() => func.apply(this, args), delay);
-      //   };
-      // }
-
-      // const handleInput = (arg) => console.log("Hello ", arg);
-      // const handleSearch = debounce(handleInput, 2000);
-      // handleSearch("Raja");
-      // handleSearch("Akash");
-      // handleSearch("Kumar");
-
-      // function throttle(func, delay) {
-      //   let lastCall = 0;
-      //   return function (...args) {
-      //     const now = Date.now();
-      //     if (now - lastCall >= delay) {
-      //       lastCall = now;
-      //       func.apply(this, args);
-      //     }
-      //   };
-      // }
-
-      // function throttle(func, delay) {
-      //   let lastCall = 0;
-      //   return function (...args) {
-      //     const now = Date.now();
-      //     if (now - lastCall >= delay) {
-      //       lastCall = now;
-      //       func.apply(this, args);
-      //     }
-      //   };
-      // }
-
-      // const throttledScroll = throttle(() => console.log("Scrolled"), 2000);
-      // window.addEventListener("scroll", throttledScroll);
-
-      // function greetUser(greetingFn) {
-      //   const name = "Akash";
-      //   greetingFn(name);
-      // }
-
-      // const sayHello = (name) => {
-      //   console.log(`Hello, ${name}!`);
+      //   let avg = total / arr.length;
+      //   return avg;
       // };
+      // console.log(calculateAverage([5, 10, 15]));
 
-      // greetUser(sayHello);
+      const logFirstAndRest = (a, b, ...rest) => ({
+        first: a,
+        second: b,
+        rest: rest,
+      });
+      console.log(logFirstAndRest(1, 2, 3, 4, 5));
 
-      // const numbers = [10, 20, 30, 40];
-      // const sumOfAll = numbers.reduce((acc, curr) => {
-      //   acc = acc + curr;
-      //   return acc;
-      // }, 0);
-      // console.log("sumOfAll", sumOfAll);
+      const calculateProduct = (...rest) =>
+        rest.reduce((acc, curr) => {
+          acc = acc * curr;
+          return acc;
+        }, 1);
 
-      // const numbers2 = [5, 12, 45, 32, 8];
-      // const maxNumber = numbers2.reduce((acc, curr) => {
-      //   curr > acc ? (acc = curr) : acc;
-      //   return acc;
-      // }, 0);
-      // console.log("maxNumber", maxNumber);
+      console.log(calculateProduct(2, 3, 4)); // Output: 24
+      console.log(calculateProduct(5, 2, 1, 3)); // Output: 30
 
-      // const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
-      // const fruitsResult = fruits.reduce((acc, curr) => {
-      //   acc[curr] = acc[curr] ? acc[curr] + 1 : 1;
-      //   return acc;
-      // }, {});
-      // console.log("fruitsResult", fruitsResult);
+      const createSentence = (...rest) =>
+        rest.reduce((acc, curr) => {
+          acc = acc + curr + " ";
+          return acc;
+        }, "");
+      console.log(createSentence("JavaScript", "is", "awesome"));
 
-      // const nested = [
-      //   [1, 2],
-      //   [3, 4],
-      //   [5, 6],
-      // ];
-      // const nestedResult = nested.reduce((acc, curr) => {
-      //   acc = [...acc, ...curr];
-      //   return acc;
-      // }, []);
-      // console.log("nestedResult", nestedResult);
+      const findSum = (str, ...rest) => {
+        let sum = rest.reduce((acc, curr) => {
+          acc = acc + curr;
+          return acc;
+        }, 0);
+        console.log(str, sum);
+      };
+      findSum("Sum of Numbers: ", 2, 4, 6, 8, 10);
 
-      // const users = [
-      //   { name: "Alice", role: "admin" },
-      //   { name: "Bob", role: "user" },
-      //   { name: "Charlie", role: "admin" },
-      // ];
+      const containsValue = (a, ...rest) => (rest.includes(a) ? true : false);
 
-      // const userResult = users.reduce((acc, curr) => {
-      //   acc[curr.role] = acc[curr.role] ? acc[curr.role] + 1 : 1;
-      //   return acc;
-      // }, {});
-      // console.log("userResult", userResult);
+      console.log(containsValue(3, 1, 2, 3, 4)); // Output: true
+      console.log(containsValue("apple", "banana", "orange")); // Output: false
 
-      // const words = ["JavaScript", "is", "awesome"];
-      // const wordsResult = words
-      //   .reduce((acc, curr) => {
-      //     acc = acc + " " + curr;
-      //     return acc;
-      //   }, "")
-      //   .trim();
-      // console.log("wordsResult", wordsResult);
+      const calculateAverage = (...rest) => {
+        let total = rest.reduce((acc, curr) => (acc = acc + curr), 0);
+        return (avg = total / rest.length);
+      };
 
-      // const cart = [
-      //   { item: "Shirt", price: 30 },
-      //   { item: "Pants", price: 50 },
-      //   { item: "Hat", price: 20 },
-      // ];
+      console.log(calculateAverage(10, 5, 15)); // Output: 10
+      console.log(calculateAverage(2, 4, 6, 8)); // Output: 5
 
-      // const total = cart.reduce((acc, curr) => {
-      //   acc = acc + curr.price;
-      //   return acc;
-      // }, 0);
-      // console.log("total", total);
+      const copyAndAppend = (rest, a) => [...rest, a];
+      console.log(copyAndAppend(["apple", "orange"], "banana"));
 
-      // const numbers = [2, 3, 4];
-      // const numberResult = numbers.reduce((acc, curr) => {
-      //   acc = acc * curr;
-      //   return acc;
-      // }, 1);
-      // console.log("numberResult", numberResult);
+      const copyAndAdd = (arr, a) => [...arr, a];
+      console.log(copyAndAdd([10, 20], 30));
 
-      // const scores = [80, 90, 100];
-      // const scoresResult = scores.reduce((acc, curr) => {
-      //   acc = acc + curr;
-      //   return acc / scores.length;
-      // }, 0);
-      // console.log("scoresResult", scoresResult);
+      const mergeArrays = (arr1, arr2) => [...arr1, ...arr2];
+      console.log(mergeArrays([10, 20], [30, 40, 50]));
 
-      // const flags = [true, true, false];
-      // const flagsResult = flags.reduce((acc, curr) => acc && curr, true);
-      // console.log("flagsResult", flagsResult);
+      const mergeNameArrays = (arr1, arr2) => [...arr1, ...arr2];
+      console.log(mergeNameArrays(["Alice", "Bob"], ["John", "Mac", "Maze"]));
+
+      const copyPersonObject = (obj1, key, value) => ({
+        ...obj1,
+        [key]: value,
+      });
+      console.log(
+        copyPersonObject({ firstName: "Alice", age: 20 }, "lastName", "Johnson")
+      );
+
+      const copyEmployeeObject = (obj1, key, value) => ({
+        ...obj1,
+        [key]: value,
+      });
+      console.log(
+        copyEmployeeObject(
+          { employeeId: 243, name: "Bob", age: 20 },
+          "department",
+          "IT department"
+        )
+      );
+
+      const mergeObjects = (obj1, obj2) => ({ ...obj1, ...obj2 });
+      console.log(mergeObjects({ x: "hello" }, { y: "world" }));
+
+      const modifyObjectProperties = (obj1, obj2) => ({ ...obj1, ...obj2 });
+      console.log(
+        modifyObjectProperties({ name: "Alice", age: 25 }, { age: 30 })
+      );
+
+      const mergeThreeArray = (arr1, arr2, arr3) => [...arr1, ...arr2, ...arr3];
+      console.log(
+        mergeThreeArray([1, true], ["Are", "You", "Hungry"], [false, 2])
+      );
+
+      const sumAndDifference = (arr) => {
+        const [a, b] = arr;
+        return { sum: a + b, diffrence: a - b };
+      };
+      console.log(sumAndDifference([5, 3]));
+
+      const extractFirstAndLast = (str) => {
+        return `firstCharacter: ${str[0]}, LastCharacter: ${
+          str[str.length - 1]
+        }`;
+      };
+      console.log(extractFirstAndLast("hello"));
+      console.log(extractFirstAndLast("world"));
+
+      const calculateRectangleArea = (obj) => {
+        const { length, width } = obj;
+        return `The area of the rectangle is: ${length * width}`;
+      };
+      console.log(calculateRectangleArea({ length: 5, width: 3 }));
     </script>
   </body>
 </html>

@@ -1283,7 +1283,7 @@ sum(5, 10, 15);
 //   },
 // };
 
-// // obj.increment();
+// obj.increment();
 
 // function Person(name, age) {
 //   this.name = name;
