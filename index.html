@@ -93,285 +93,285 @@
       // );
       // console.log(minnNum);
 
-      const numsArray = [10, 5, 8, 4, 6];
-      const numNewArr = numsArray.reduce((acc, curr) => {
-        acc.push(curr - curr * curr);
-        return acc;
-      }, []);
-      console.log(numNewArr);
-
-      const numArr2 = numsArray.map((num) => num - num * num);
-      console.log(numArr2);
-
-      const numbsArray = [3, -2, -5, 12, 8, -4, 7];
-      const numArr3 = numbsArray.map((num) => (num < 0 ? num - num * 2 : num));
-      console.log(numArr3);
-
-      const sentencesArray = [
-        "JavaScript is a powerful programming language.",
-
-        "Web development involves frontend and backend technologies.",
-
-        "Coding is a skill that can be learned and mastered over time.",
-      ];
-      const sentenceArr = sentencesArray.map(
-        (str) => str + str.split(" ").length
-      );
-      console.log(sentenceArr);
-
-      const cars = [
-        { brand: "Toyota", model: "Camry" },
-
-        { brand: "Honda", model: "Accord" },
-
-        { brand: "Ford", model: "Mustang" },
-      ];
-      const brandArr = cars.map((car) => car.brand);
-      console.log(brandArr);
-
-      const movies = [
-        { title: "Inception", genre: "Sci-Fi" },
-
-        { title: "The Shawshank Redemption", genre: "Drama" },
-
-        { title: "The Dark Knight", genre: "Action" },
-      ];
-      const moviesArr = movies.map((movie) => movie.genre);
-      console.log(moviesArr);
-
-      const printMovie = movies.forEach((movie) => console.log(movie.genre));
-
-      const furniture = [
-        { type: "Sofa", width: 200, height: 80 },
-
-        { type: "Table", width: 120, height: 60 },
-
-        { type: "Chair", width: 50, height: 45 },
-      ];
-      const incresedDimension = furniture.map((data) => {
-        data.width = data.width + data.width * 0.1;
-        data.height = data.height + data.height * 0.1;
-        return data;
-      });
-      console.log(incresedDimension);
-
-      const products = [
-        { name: "Laptop", price: 1200 },
-
-        { name: "Smartphone", price: 800 },
-
-        { name: "Headphones", price: 50 },
-
-        { name: "Camera", price: 300 },
-      ];
-
-      const NewProducts = products.map((product) => {
-        product.price <= 100 ? (product["affordable"] = true) : null;
-        return product;
-      });
-      console.log("NewProducts", NewProducts);
-
-      const numbers = [12, 7, 15, -8, 22, -10, 5, 13, -18];
-      const newNumArr = numbers.filter((num) => num < 0);
-      console.log(newNumArr);
-
-      const students = [
-        { name: "Alice", score: 85, activeParticipant: true, club: "Math" },
-
-        { name: "Bob", score: 55, activeParticipant: false, club: "History" },
-
-        {
-          name: "Charlie",
-          score: 75,
-          activeParticipant: true,
-          club: "Science",
-        },
-      ];
-      const filteresStudents = students.filter(
-        (student) =>
-          student.score > 70 &&
-          student.activeParticipant === true &&
-          (student.club === "Math" || "Science")
-      );
-      console.log(filteresStudents);
-
-      const filteresStudents2 = () => {
-        let filteresArr = [];
-        for (let i = 0; i < students.length; i++) {
-          if (
-            (students[i].score > 75 &&
-              students[i].activeParticipant === true &&
-              students[i].club === "Math") ||
-            students[i].club === "Science"
-          ) {
-            filteresArr.push(students[i]);
-          }
-        }
-        return filteresArr;
-      };
-      console.log(filteresStudents2());
-
-      const arrr = [11, 12, 12, 11, 23, 34];
-      const arrResult = arrr.reduce((acc, curr) => {
-        acc[curr] = (acc[curr] || 0) + 1;
-        return acc;
-      }, {});
-      console.log(arrResult);
-
-      const words = [
-        "apple",
-        "banana",
-        "kiwi",
-        "grape",
-        "pear",
-        "orange",
-        "strawberry",
-      ];
-      const filterWord = words.filter(
-        (word) => word.length > 5 && word.includes("a")
-      );
-      console.log(filterWord);
-
-      const books = [
-        {
-          title: "Harry Potter and the Sorcerer's Stone",
-          author: "J.K. Rowling",
-          genre: "Fantasy",
-        },
-
-        { title: "The Hobbit", author: "J.R.R. Tolkien", genre: "Fantasy" },
-
-        {
-          title: "To Kill a Mockingbird",
-          author: "Harper Lee",
-          genre: "Drama",
-        },
-
-        { title: "Dune", author: "Frank Herbert", genre: "Science Fiction" },
-      ];
-
-      const genreFilter = books.filter((book) => book.genre === "Fantasy");
-      console.log(genreFilter);
-
-      const restaurants = [
-        {
-          name: "Pasta Paradise",
-          stars: 4.5,
-          cuisine: "Italian",
-          openOnSundays: false,
-        },
-
-        {
-          name: "Sushi Sensation",
-          stars: 3.8,
-          cuisine: "Japanese",
-          openOnSundays: true,
-        },
-
-        {
-          name: "Burger Binge",
-          stars: 4.2,
-          cuisine: "American",
-          openOnSundays: true,
-        },
-
-        { name: "Nasi", stars: 4.5, cuisine: "Italian", openOnSundays: true },
-      ];
-      const restaurantFilter = restaurants.filter(
-        (restaurant) =>
-          restaurant.stars > 4 &&
-          restaurant.cuisine === "Italian" &&
-          restaurant.openOnSundays === true
-      );
-      console.log(restaurantFilter);
-
-      const products2 = [
-        { name: "Bread", price: 480, quantity: 3 },
-
-        { name: "Clips", price: 200, quantity: 5 },
-
-        { name: "green Bread Knife", price: 3077, quantity: 1 },
-
-        { name: "Slipper", price: 150, quantity: 2 },
-      ];
-
-      const newProductArr = products2
-        .filter((product) => product.name.includes("Bread"))
-        .map((product) => product.name);
-      console.log(newProductArr);
-
-      const employees = [
-        { name: "David", salary: 60000 },
-
-        { name: "Emma", salary: 75000 },
-
-        { name: "Alex", salary: 90000 },
-
-        { name: "Sophie", salary: 55000 },
-      ];
-
-      const employeesTotalSalaray = employees.reduce((acc, curr) => {
-        acc = acc + curr.salary;
-        return acc;
-      }, 0);
-      const employeesAverageSalaray = employeesTotalSalaray / employees.length;
-      console.log(employeesAverageSalaray);
-
-      const newEmployees = employees.map((employee) => {
-        employee["IsAbloveAverage"] =
-          employee.salary > employeesAverageSalaray ? true : false;
-        return employee;
-      });
-      console.log(newEmployees);
-
-      const community = [
-        { name: "Raju", role: "student", hours: [1, 2, 3, 1, 2, 3, 0] },
-
-        { name: "Aakash", role: "mentor", hours: [1, 2, 3, 1, 2, 3, 0] },
-
-        { name: "Ramesh", role: "student", hours: [1, 2, 3, 1, 2, 3, 3] },
-
-        { name: "Jiten", role: "TA", hours: [2, 2, 3, 5, 2, 3, 0] },
-
-        { name: "Harsh", role: "student", hours: [1, 7, 3, 2, 2, 3, 0] },
-
-        { name: "Akshay", role: "student", hours: [1, 6, 3, 1, 2, 3, 0] },
-
-        { name: "Rohan", role: "mentor", hours: [1, 2, 3, 12, 2, 3, 0] },
-
-        { name: "Mohan", role: "student", hours: [1, 8, 3, 0, 2, 3, 0] },
-      ];
-
-      const communityResult = community.reduce((acc, curr) => {
-        const mostHours = acc.hours.reduce(
-          (acc, curr) => (acc = acc + curr),
-          0
-        );
-        const currentHour = curr.hours.reduce(
-          (acc, curr) => (acc = acc + curr),
-          0
-        );
-        return mostHours > currentHour ? acc : curr;
-      });
-      console.log(communityResult);
-
-      const communityData = [
-        { name: "Raju", role: "student", hours: [1, 2, 3, 1, 2, 3, 0] },
-
-        { name: "Aakash", role: "mentor", hours: [1, 2, 3, 4, 5, 6, 7] },
-
-        { name: "Ramesh", role: "student", hours: [4, 5, 6, 4, 5, 6, 0] },
-
-        { name: "Jiten", role: "TA", hours: [2, 2, 3, 5, 2, 3, 0] },
-
-        { name: "Harsh", role: "student", hours: [7, 8, 9, 7, 8, 9, 0] },
-
-        { name: "Akshay", role: "student", hours: [1, 3, 5, 7, 9, 0, 2] },
-
-        { name: "Rohan", role: "mentor", hours: [1, 2, 3, 12, 2, 3, 0] },
-
-        { name: "Mohan", role: "student", hours: [4, 6, 8, 0, 1, 9, 2] },
-      ];
+      // const numsArray = [10, 5, 8, 4, 6];
+      // const numNewArr = numsArray.reduce((acc, curr) => {
+      //   acc.push(curr - curr * curr);
+      //   return acc;
+      // }, []);
+      // console.log(numNewArr);
+
+      // const numArr2 = numsArray.map((num) => num - num * num);
+      // console.log(numArr2);
+
+      // const numbsArray = [3, -2, -5, 12, 8, -4, 7];
+      // const numArr3 = numbsArray.map((num) => (num < 0 ? num - num * 2 : num));
+      // console.log(numArr3);
+
+      // const sentencesArray = [
+      //   "JavaScript is a powerful programming language.",
+
+      //   "Web development involves frontend and backend technologies.",
+
+      //   "Coding is a skill that can be learned and mastered over time.",
+      // ];
+      // const sentenceArr = sentencesArray.map(
+      //   (str) => str + str.split(" ").length
+      // );
+      // console.log(sentenceArr);
+
+      // const cars = [
+      //   { brand: "Toyota", model: "Camry" },
+
+      //   { brand: "Honda", model: "Accord" },
+
+      //   { brand: "Ford", model: "Mustang" },
+      // ];
+      // const brandArr = cars.map((car) => car.brand);
+      // console.log(brandArr);
+
+      // const movies = [
+      //   { title: "Inception", genre: "Sci-Fi" },
+
+      //   { title: "The Shawshank Redemption", genre: "Drama" },
+
+      //   { title: "The Dark Knight", genre: "Action" },
+      // ];
+      // const moviesArr = movies.map((movie) => movie.genre);
+      // console.log(moviesArr);
+
+      // const printMovie = movies.forEach((movie) => console.log(movie.genre));
+
+      // const furniture = [
+      //   { type: "Sofa", width: 200, height: 80 },
+
+      //   { type: "Table", width: 120, height: 60 },
+
+      //   { type: "Chair", width: 50, height: 45 },
+      // ];
+      // const incresedDimension = furniture.map((data) => {
+      //   data.width = data.width + data.width * 0.1;
+      //   data.height = data.height + data.height * 0.1;
+      //   return data;
+      // });
+      // console.log(incresedDimension);
+
+      // const products = [
+      //   { name: "Laptop", price: 1200 },
+
+      //   { name: "Smartphone", price: 800 },
+
+      //   { name: "Headphones", price: 50 },
+
+      //   { name: "Camera", price: 300 },
+      // ];
+
+      // const NewProducts = products.map((product) => {
+      //   product.price <= 100 ? (product["affordable"] = true) : null;
+      //   return product;
+      // });
+      // console.log("NewProducts", NewProducts);
+
+      // const numbers = [12, 7, 15, -8, 22, -10, 5, 13, -18];
+      // const newNumArr = numbers.filter((num) => num < 0);
+      // console.log(newNumArr);
+
+      // const students = [
+      //   { name: "Alice", score: 85, activeParticipant: true, club: "Math" },
+
+      //   { name: "Bob", score: 55, activeParticipant: false, club: "History" },
+
+      //   {
+      //     name: "Charlie",
+      //     score: 75,
+      //     activeParticipant: true,
+      //     club: "Science",
+      //   },
+      // ];
+      // const filteresStudents = students.filter(
+      //   (student) =>
+      //     student.score > 70 &&
+      //     student.activeParticipant === true &&
+      //     (student.club === "Math" || "Science")
+      // );
+      // console.log(filteresStudents);
+
+      // const filteresStudents2 = () => {
+      //   let filteresArr = [];
+      //   for (let i = 0; i < students.length; i++) {
+      //     if (
+      //       (students[i].score > 75 &&
+      //         students[i].activeParticipant === true &&
+      //         students[i].club === "Math") ||
+      //       students[i].club === "Science"
+      //     ) {
+      //       filteresArr.push(students[i]);
+      //     }
+      //   }
+      //   return filteresArr;
+      // };
+      // console.log(filteresStudents2());
+
+      // const arrr = [11, 12, 12, 11, 23, 34];
+      // const arrResult = arrr.reduce((acc, curr) => {
+      //   acc[curr] = (acc[curr] || 0) + 1;
+      //   return acc;
+      // }, {});
+      // console.log(arrResult);
+
+      // const words = [
+      //   "apple",
+      //   "banana",
+      //   "kiwi",
+      //   "grape",
+      //   "pear",
+      //   "orange",
+      //   "strawberry",
+      // ];
+      // const filterWord = words.filter(
+      //   (word) => word.length > 5 && word.includes("a")
+      // );
+      // console.log(filterWord);
+
+      // const books = [
+      //   {
+      //     title: "Harry Potter and the Sorcerer's Stone",
+      //     author: "J.K. Rowling",
+      //     genre: "Fantasy",
+      //   },
+
+      //   { title: "The Hobbit", author: "J.R.R. Tolkien", genre: "Fantasy" },
+
+      //   {
+      //     title: "To Kill a Mockingbird",
+      //     author: "Harper Lee",
+      //     genre: "Drama",
+      //   },
+
+      //   { title: "Dune", author: "Frank Herbert", genre: "Science Fiction" },
+      // ];
+
+      // const genreFilter = books.filter((book) => book.genre === "Fantasy");
+      // console.log(genreFilter);
+
+      // const restaurants = [
+      //   {
+      //     name: "Pasta Paradise",
+      //     stars: 4.5,
+      //     cuisine: "Italian",
+      //     openOnSundays: false,
+      //   },
+
+      //   {
+      //     name: "Sushi Sensation",
+      //     stars: 3.8,
+      //     cuisine: "Japanese",
+      //     openOnSundays: true,
+      //   },
+
+      //   {
+      //     name: "Burger Binge",
+      //     stars: 4.2,
+      //     cuisine: "American",
+      //     openOnSundays: true,
+      //   },
+
+      //   { name: "Nasi", stars: 4.5, cuisine: "Italian", openOnSundays: true },
+      // ];
+      // const restaurantFilter = restaurants.filter(
+      //   (restaurant) =>
+      //     restaurant.stars > 4 &&
+      //     restaurant.cuisine === "Italian" &&
+      //     restaurant.openOnSundays === true
+      // );
+      // console.log(restaurantFilter);
+
+      // const products2 = [
+      //   { name: "Bread", price: 480, quantity: 3 },
+
+      //   { name: "Clips", price: 200, quantity: 5 },
+
+      //   { name: "green Bread Knife", price: 3077, quantity: 1 },
+
+      //   { name: "Slipper", price: 150, quantity: 2 },
+      // ];
+
+      // const newProductArr = products2
+      //   .filter((product) => product.name.includes("Bread"))
+      //   .map((product) => product.name);
+      // console.log(newProductArr);
+
+      // const employees = [
+      //   { name: "David", salary: 60000 },
+
+      //   { name: "Emma", salary: 75000 },
+
+      //   { name: "Alex", salary: 90000 },
+
+      //   { name: "Sophie", salary: 55000 },
+      // ];
+
+      // const employeesTotalSalaray = employees.reduce((acc, curr) => {
+      //   acc = acc + curr.salary;
+      //   return acc;
+      // }, 0);
+      // const employeesAverageSalaray = employeesTotalSalaray / employees.length;
+      // console.log(employeesAverageSalaray);
+
+      // const newEmployees = employees.map((employee) => {
+      //   employee["IsAbloveAverage"] =
+      //     employee.salary > employeesAverageSalaray ? true : false;
+      //   return employee;
+      // });
+      // console.log(newEmployees);
+
+      // const community = [
+      //   { name: "Raju", role: "student", hours: [1, 2, 3, 1, 2, 3, 0] },
+
+      //   { name: "Aakash", role: "mentor", hours: [1, 2, 3, 1, 2, 3, 0] },
+
+      //   { name: "Ramesh", role: "student", hours: [1, 2, 3, 1, 2, 3, 3] },
+
+      //   { name: "Jiten", role: "TA", hours: [2, 2, 3, 5, 2, 3, 0] },
+
+      //   { name: "Harsh", role: "student", hours: [1, 7, 3, 2, 2, 3, 0] },
+
+      //   { name: "Akshay", role: "student", hours: [1, 6, 3, 1, 2, 3, 0] },
+
+      //   { name: "Rohan", role: "mentor", hours: [1, 2, 3, 12, 2, 3, 0] },
+
+      //   { name: "Mohan", role: "student", hours: [1, 8, 3, 0, 2, 3, 0] },
+      // ];
+
+      // const communityResult = community.reduce((acc, curr) => {
+      //   const mostHours = acc.hours.reduce(
+      //     (acc, curr) => (acc = acc + curr),
+      //     0
+      //   );
+      //   const currentHour = curr.hours.reduce(
+      //     (acc, curr) => (acc = acc + curr),
+      //     0
+      //   );
+      //   return mostHours > currentHour ? acc : curr;
+      // });
+      // console.log(communityResult);
+
+      // const communityData = [
+      //   { name: "Raju", role: "student", hours: [1, 2, 3, 1, 2, 3, 0] },
+
+      //   { name: "Aakash", role: "mentor", hours: [1, 2, 3, 4, 5, 6, 7] },
+
+      //   { name: "Ramesh", role: "student", hours: [4, 5, 6, 4, 5, 6, 0] },
+
+      //   { name: "Jiten", role: "TA", hours: [2, 2, 3, 5, 2, 3, 0] },
+
+      //   { name: "Harsh", role: "student", hours: [7, 8, 9, 7, 8, 9, 0] },
+
+      //   { name: "Akshay", role: "student", hours: [1, 3, 5, 7, 9, 0, 2] },
+
+      //   { name: "Rohan", role: "mentor", hours: [1, 2, 3, 12, 2, 3, 0] },
+
+      //   { name: "Mohan", role: "student", hours: [4, 6, 8, 0, 1, 9, 2] },
+      // ];
 
       // const communityDataResult = communityData.map((person) => {
       //   const totalHours = person.hours.reduce((sum, h) => sum + h, 0);
@@ -384,50 +384,50 @@
       // });
 
       // most hour
-      const communityDataResult = communityData.reduce((acc, curr) => {
-        const highestHour = acc.hours.reduce(
-          (acc, curr) => (acc = acc + curr),
-          0
-        );
-        const currentHour = acc.hours.reduce(
-          (acc, curr) => (acc = acc + curr),
-          0
-        );
+      // const communityDataResult = communityData.reduce((acc, curr) => {
+      //   const highestHour = acc.hours.reduce(
+      //     (acc, curr) => (acc = acc + curr),
+      //     0
+      //   );
+      //   const currentHour = acc.hours.reduce(
+      //     (acc, curr) => (acc = acc + curr),
+      //     0
+      //   );
 
-        return highestHour > currentHour ? acc : curr;
-      });
-      console.log("communityDataResult", communityDataResult);
+      //   return highestHour > currentHour ? acc : curr;
+      // });
+      // console.log("communityDataResult", communityDataResult);
 
-      const communityDataResult2 = communityData.map((data) => {
-        const totalHours = data.hours.reduce(
-          (acc, curr) => (acc = acc + curr),
-          0
-        );
+      // const communityDataResult2 = communityData.map((data) => {
+      //   const totalHours = data.hours.reduce(
+      //     (acc, curr) => (acc = acc + curr),
+      //     0
+      //   );
 
-        if (data.role === "student" && totalHours > 20) {
-          return { ...data, tag: "regular" };
-        }
-        return data;
-      });
-      console.log("communityDataResult2", communityDataResult2);
+      //   if (data.role === "student" && totalHours > 20) {
+      //     return { ...data, tag: "regular" };
+      //   }
+      //   return data;
+      // });
+      // console.log("communityDataResult2", communityDataResult2);
 
-      const checkNum = (a, b) => a / b;
-      console.log(checkNum(4, 2));
+      // const checkNum = (a, b) => a / b;
+      // console.log(checkNum(4, 2));
 
-      const reverseStr = (str) => {
-        let reverse = "";
-        for (let i = str.length - 1; i >= 0; i--) {
-          reverse = reverse + str[i];
-        }
-        return reverse;
-      };
-      console.log(reverseStr("abc"));
+      // const reverseStr = (str) => {
+      //   let reverse = "";
+      //   for (let i = str.length - 1; i >= 0; i--) {
+      //     reverse = reverse + str[i];
+      //   }
+      //   return reverse;
+      // };
+      // console.log(reverseStr("abc"));
 
-      const createObj = (str) => ({
-        length: str.length,
-        uppercase: str.toUpperCase(),
-      });
-      console.log(createObj("Raja"));
+      // const createObj = (str) => ({
+      //   length: str.length,
+      //   uppercase: str.toUpperCase(),
+      // });
+      // console.log(createObj("Raja"));
 
       // const calculateAverage = (arr) => {
       //   let total = 0;
@@ -446,108 +446,168 @@
       });
       console.log(logFirstAndRest(1, 2, 3, 4, 5));
 
-      const calculateProduct = (...rest) =>
-        rest.reduce((acc, curr) => {
-          acc = acc * curr;
-          return acc;
-        }, 1);
+      // const calculateProduct = (...rest) =>
+      //   rest.reduce((acc, curr) => {
+      //     acc = acc * curr;
+      //     return acc;
+      //   }, 1);
 
-      console.log(calculateProduct(2, 3, 4)); // Output: 24
-      console.log(calculateProduct(5, 2, 1, 3)); // Output: 30
+      // console.log(calculateProduct(2, 3, 4)); // Output: 24
+      // console.log(calculateProduct(5, 2, 1, 3)); // Output: 30
 
-      const createSentence = (...rest) =>
-        rest.reduce((acc, curr) => {
-          acc = acc + curr + " ";
-          return acc;
-        }, "");
-      console.log(createSentence("JavaScript", "is", "awesome"));
+      // const createSentence = (...rest) =>
+      //   rest.reduce((acc, curr) => {
+      //     acc = acc + curr + " ";
+      //     return acc;
+      //   }, "");
+      // console.log(createSentence("JavaScript", "is", "awesome"));
 
-      const findSum = (str, ...rest) => {
-        let sum = rest.reduce((acc, curr) => {
-          acc = acc + curr;
-          return acc;
-        }, 0);
-        console.log(str, sum);
-      };
-      findSum("Sum of Numbers: ", 2, 4, 6, 8, 10);
+      // const findSum = (str, ...rest) => {
+      //   let sum = rest.reduce((acc, curr) => {
+      //     acc = acc + curr;
+      //     return acc;
+      //   }, 0);
+      //   console.log(str, sum);
+      // };
+      // findSum("Sum of Numbers: ", 2, 4, 6, 8, 10);
 
-      const containsValue = (a, ...rest) => (rest.includes(a) ? true : false);
+      // const containsValue = (a, ...rest) => (rest.includes(a) ? true : false);
 
-      console.log(containsValue(3, 1, 2, 3, 4)); // Output: true
-      console.log(containsValue("apple", "banana", "orange")); // Output: false
+      // console.log(containsValue(3, 1, 2, 3, 4)); // Output: true
+      // console.log(containsValue("apple", "banana", "orange")); // Output: false
 
-      const calculateAverage = (...rest) => {
-        let total = rest.reduce((acc, curr) => (acc = acc + curr), 0);
-        return (avg = total / rest.length);
-      };
+      // const calculateAverage = (...rest) => {
+      //   let total = rest.reduce((acc, curr) => (acc = acc + curr), 0);
+      //   return (avg = total / rest.length);
+      // };
 
-      console.log(calculateAverage(10, 5, 15)); // Output: 10
-      console.log(calculateAverage(2, 4, 6, 8)); // Output: 5
+      // console.log(calculateAverage(10, 5, 15)); // Output: 10
+      // console.log(calculateAverage(2, 4, 6, 8)); // Output: 5
 
-      const copyAndAppend = (rest, a) => [...rest, a];
-      console.log(copyAndAppend(["apple", "orange"], "banana"));
+      // const copyAndAppend = (rest, a) => [...rest, a];
+      // console.log(copyAndAppend(["apple", "orange"], "banana"));
 
-      const copyAndAdd = (arr, a) => [...arr, a];
-      console.log(copyAndAdd([10, 20], 30));
+      // const copyAndAdd = (arr, a) => [...arr, a];
+      // console.log(copyAndAdd([10, 20], 30));
 
-      const mergeArrays = (arr1, arr2) => [...arr1, ...arr2];
-      console.log(mergeArrays([10, 20], [30, 40, 50]));
+      // const mergeArrays = (arr1, arr2) => [...arr1, ...arr2];
+      // console.log(mergeArrays([10, 20], [30, 40, 50]));
 
-      const mergeNameArrays = (arr1, arr2) => [...arr1, ...arr2];
-      console.log(mergeNameArrays(["Alice", "Bob"], ["John", "Mac", "Maze"]));
+      // const mergeNameArrays = (arr1, arr2) => [...arr1, ...arr2];
+      // console.log(mergeNameArrays(["Alice", "Bob"], ["John", "Mac", "Maze"]));
 
-      const copyPersonObject = (obj1, key, value) => ({
-        ...obj1,
-        [key]: value,
-      });
-      console.log(
-        copyPersonObject({ firstName: "Alice", age: 20 }, "lastName", "Johnson")
-      );
+      // const copyPersonObject = (obj1, key, value) => ({
+      //   ...obj1,
+      //   [key]: value,
+      // });
+      // console.log(
+      //   copyPersonObject({ firstName: "Alice", age: 20 }, "lastName", "Johnson")
+      // );
 
-      const copyEmployeeObject = (obj1, key, value) => ({
-        ...obj1,
-        [key]: value,
-      });
-      console.log(
-        copyEmployeeObject(
-          { employeeId: 243, name: "Bob", age: 20 },
-          "department",
-          "IT department"
-        )
-      );
+      // const copyEmployeeObject = (obj1, key, value) => ({
+      //   ...obj1,
+      //   [key]: value,
+      // });
+      // console.log(
+      //   copyEmployeeObject(
+      //     { employeeId: 243, name: "Bob", age: 20 },
+      //     "department",
+      //     "IT department"
+      //   )
+      // );
 
-      const mergeObjects = (obj1, obj2) => ({ ...obj1, ...obj2 });
-      console.log(mergeObjects({ x: "hello" }, { y: "world" }));
+      // const mergeObjects = (obj1, obj2) => ({ ...obj1, ...obj2 });
+      // console.log(mergeObjects({ x: "hello" }, { y: "world" }));
 
-      const modifyObjectProperties = (obj1, obj2) => ({ ...obj1, ...obj2 });
-      console.log(
-        modifyObjectProperties({ name: "Alice", age: 25 }, { age: 30 })
-      );
+      // const modifyObjectProperties = (obj1, obj2) => ({ ...obj1, ...obj2 });
+      // console.log(
+      //   modifyObjectProperties({ name: "Alice", age: 25 }, { age: 30 })
+      // );
 
-      const mergeThreeArray = (arr1, arr2, arr3) => [...arr1, ...arr2, ...arr3];
-      console.log(
-        mergeThreeArray([1, true], ["Are", "You", "Hungry"], [false, 2])
-      );
+      // const mergeThreeArray = (arr1, arr2, arr3) => [...arr1, ...arr2, ...arr3];
+      // console.log(
+      //   mergeThreeArray([1, true], ["Are", "You", "Hungry"], [false, 2])
+      // );
 
-      const sumAndDifference = (arr) => {
-        const [a, b] = arr;
-        return { sum: a + b, diffrence: a - b };
-      };
-      console.log(sumAndDifference([5, 3]));
+      // const sumAndDifference = (arr) => {
+      //   const [a, b] = arr;
+      //   return { sum: a + b, diffrence: a - b };
+      // };
+      // console.log(sumAndDifference([5, 3]));
 
-      const extractFirstAndLast = (str) => {
-        return `firstCharacter: ${str[0]}, LastCharacter: ${
-          str[str.length - 1]
-        }`;
-      };
-      console.log(extractFirstAndLast("hello"));
-      console.log(extractFirstAndLast("world"));
+      // const extractFirstAndLast = (str) => {
+      //   return `firstCharacter: ${str[0]}, LastCharacter: ${
+      //     str[str.length - 1]
+      //   }`;
+      // };
+      // console.log(extractFirstAndLast("hello"));
+      // console.log(extractFirstAndLast("world"));
 
-      const calculateRectangleArea = (obj) => {
-        const { length, width } = obj;
-        return `The area of the rectangle is: ${length * width}`;
-      };
-      console.log(calculateRectangleArea({ length: 5, width: 3 }));
+      // const calculateRectangleArea = (obj) => {
+      //   const { length, width } = obj;
+      //   return `The area of the rectangle is: ${length * width}`;
+      // };
+      // console.log(calculateRectangleArea({ length: 5, width: 3 }));
+
+      // const p1 = Promise.resolve(1);
+      // const p2 = Promise.resolve(2);
+      // const p3 = Promise.resolve(3);
+
+      // Promise.all([p1, p2, p3])
+      //   .then((message) => console.log(message))
+      //   .catch((error) => console.error(error));
+
+      // const p4 = Promise.resolve("A");
+      // const p5 = Promise.reject("B");
+
+      // Promise.all([p4, p5])
+      //   .then((message) => console.log(message))
+      //   .catch((error) => console.log(error));
+
+      // async function load() {
+      //   console.log("Start");
+      //   await new Promise((resolve) => setTimeout(resolve, 1000));
+      //   console.log("End");
+      // }
+
+      // load();
+      // console.log("Outside");
+
+      // Promise.resolve()
+      //   .then(() => {
+      //     console.log("First");
+      //     return Promise.resolve("Second");
+      //   })
+      //   .then((res) => {
+      //     console.log(res);
+      //     throw new Error("Third");
+      //   })
+      //   .catch((err) => {
+      //     console.log(err.message);
+      //   });
+
+      // const SlovePromise = new Promise((resolve, reject) => {
+      //   const num = 5;
+      //   if (num > 2) {
+      //     resolve("Greater");
+      //   } else {
+      //     reject("Smaller");
+      //   }
+      // });
+
+      // SlovePromise.then((res) => console.log(res))
+      //   .catch((err) => console.log(err))
+      //   .finally(() => console.log("finished"));
+
+      console.log("Start");
+
+      setTimeout(() => {
+        console.log("Timeout");
+      }, 1000);
+
+      Promise.resolve().then(() => console.log("Promise"));
+
+      console.log("End");
     </script>
   </body>
 </html>
